@@ -26,26 +26,26 @@
   {
     "id": "bevitec",
     "title": {
-      "ru": "Выставка Bevitec",
-      "en": "Bevitec trade show"
+      "ru": "Выставка Bevitec 2026",
+      "en": "Bevitec 2026 trade show"
     },
     "location": {
-      "ru": "Москва, Россия",
-      "en": "Moscow, Russia"
+      "ru": "Москва, Крокус Экспо",
+      "en": "Moscow, Crocus Expo"
     },
-    "date": "",
+    "date": "2026-04-14",
     "role": {
       "ru": "Организация участия компании",
       "en": "Company participation lead"
     },
     "description": {
-      "ru": "Участие Грейнфорд-Агро в выставке технологий для производства напитков.",
-      "en": "Grainford-Agro at the beverage production technology trade show."
+      "ru": "Международная выставка оборудования, ингредиентов и упаковки для производства напитков. Стенд F02 Грейнфорд-Агро: поставки солода и зерновых культур, переговоры с пивоварнями.",
+      "en": "International exhibition of equipment, ingredients and packaging for beverage production. Grainford-Agro booth F02: malt and grain supply, meetings with breweries."
     },
-    "image": "",
-    "url": "",
+    "image": "events/bevitec-2026.jpg",
+    "url": "https://m.vk.ru/wall-232027742_5",
     "embedUrl": "",
-    "source": "telegram"
+    "source": "vk"
   },
   {
     "id": "exporter-2023",
