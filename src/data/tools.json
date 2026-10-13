@@ -24,6 +24,12 @@
     "group": "ads"
   },
   {
+    "id": "yandex-business",
+    "name": "Яндекс Бизнес",
+    "logo": "logos/tools/yandex-business.webp",
+    "group": "ads"
+  },
+  {
     "id": "yandex-webmaster",
     "name": "Яндекс Вебмастер",
     "logo": "logos/tools/yandex-webmaster.webp",
@@ -51,6 +57,12 @@
     "id": "yandex-datalens",
     "name": "Yandex DataLens",
     "logo": "logos/tools/yandex-datalens.webp",
+    "group": "seo"
+  },
+  {
+    "id": "roistat",
+    "name": "Roistat",
+    "logo": "logos/tools/roistat.webp",
     "group": "seo"
   },
   {
