@@ -112,5 +112,11 @@
     "name": "Nano Banana Pro (Google)",
     "logo": "logos/tools/nano-banana.jpg",
     "group": "ai"
+  },
+  {
+    "id": "higgsfield",
+    "name": "Higgsfield AI",
+    "logo": "logos/tools/higgsfield.webp",
+    "group": "ai"
   }
 ]
