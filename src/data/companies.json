@@ -48,8 +48,8 @@
   {
     "id": "softline",
     "name": {
-      "ru": "Softline",
-      "en": "Softline"
+      "ru": "ГК Softline",
+      "en": "Softline Group"
     },
     "logo": "logos/companies/softline.png",
     "years": "2024–2025",
@@ -186,8 +186,8 @@
   {
     "id": "amc",
     "name": {
-      "ru": "AMC (Швейцария)",
-      "en": "AMC (Switzerland)"
+      "ru": "AMC International",
+      "en": "AMC International"
     },
     "logo": "logos/companies/amc.webp",
     "years": "2014–2017",
@@ -232,8 +232,8 @@
   {
     "id": "nuskin",
     "name": {
-      "ru": "Nu Skin",
-      "en": "Nu Skin"
+      "ru": "Nu Skin Inc.",
+      "en": "Nu Skin Inc."
     },
     "logo": "logos/companies/nuskin.webp",
     "years": "2012–2014",
