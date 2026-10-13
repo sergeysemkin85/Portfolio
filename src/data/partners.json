@@ -1,8 +1,67 @@
 [
-  { "id": "rec", "name": { "ru": "Российский экспортный центр", "en": "Russian Export Center" }, "logo": "logos/partners/rec.webp", "url": "https://www.exportcenter.ru/" },
-  { "id": "mec", "name": { "ru": "Московский экспортный центр", "en": "Moscow Export Center" }, "logo": "logos/partners/mec.png", "url": "" },
-  { "id": "rosbiotech", "name": { "ru": "Росбиотех", "en": "Rosbiotech University" }, "logo": "logos/partners/rosbiotech.png", "url": "" },
-  { "id": "skolkovo", "name": { "ru": "Сколково", "en": "Skolkovo" }, "logo": "logos/partners/skolkovo.webp", "url": "https://sk.ru/" },
-  { "id": "breweries", "name": { "ru": "Пивоварни-партнёры", "en": "Partner breweries" }, "logo": "", "url": "", "placeholder": true },
-  { "id": "bloggers", "name": { "ru": "Блогеры-партнёры", "en": "Partner bloggers" }, "logo": "", "url": "", "placeholder": true }
+  {
+    "id": "rec",
+    "name": {
+      "ru": "Российский экспортный центр",
+      "en": "Russian Export Center"
+    },
+    "logo": "logos/partners/rec.webp",
+    "url": "https://www.exportcenter.ru/"
+  },
+  {
+    "id": "mec",
+    "name": {
+      "ru": "Московский экспортный центр",
+      "en": "Moscow Export Center"
+    },
+    "logo": "logos/partners/mec.png",
+    "url": ""
+  },
+  {
+    "id": "rosbiotech",
+    "name": {
+      "ru": "Росбиотех",
+      "en": "Rosbiotech University"
+    },
+    "logo": "logos/partners/rosbiotech.png",
+    "url": ""
+  },
+  {
+    "id": "skolkovo",
+    "name": {
+      "ru": "Сколково",
+      "en": "Skolkovo"
+    },
+    "logo": "logos/partners/skolkovo.webp",
+    "url": "https://sk.ru/"
+  },
+  {
+    "id": "roscongress",
+    "name": {
+      "ru": "Росконгресс",
+      "en": "Roscongress Foundation"
+    },
+    "logo": "logos/partners/roscongress.webp",
+    "url": "https://roscongress.org/"
+  },
+  {
+    "id": "breweries",
+    "name": {
+      "ru": "Пивоварни-партнёры",
+      "en": "Partner breweries"
+    },
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  },
+  {
+    "id": "bloggers",
+    "name": {
+      "ru": "Блогеры-партнёры",
+      "en": "Partner bloggers"
+    },
+    "logo": "",
+    "url": "",
+    "placeholder": true
+  }
 ]
