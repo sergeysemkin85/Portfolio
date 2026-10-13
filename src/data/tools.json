@@ -1,14 +1,80 @@
 [
-  { "id": "yandex-direct", "name": "Яндекс Директ", "logo": "logos/tools/yandex-direct.png", "group": "ads" },
-  { "id": "promopult", "name": "PromoPult", "logo": "logos/tools/promopult.webp", "group": "ads" },
-  { "id": "click-ru", "name": "click.ru", "logo": "logos/tools/click-ru.webp", "group": "ads" },
-  { "id": "yandex-webmaster", "name": "Яндекс Вебмастер", "logo": "logos/tools/yandex-webmaster.png", "group": "seo" },
-  { "id": "google-search-console", "name": "Google Search Console", "logo": "logos/tools/google-search-console.webp", "group": "seo" },
-  { "id": "mindbox", "name": "Mindbox", "logo": "logos/tools/mindbox.jpg", "group": "crm" },
-  { "id": "bitrix24", "name": "Битрикс24", "logo": "logos/tools/bitrix24.webp", "group": "crm" },
-  { "id": "mango-office", "name": "Mango Office", "logo": "logos/tools/mango-office.webp", "group": "crm" },
-  { "id": "1c-bitrix", "name": "1С-Битрикс", "logo": "logos/tools/1c-bitrix.webp", "group": "web" },
-  { "id": "figma", "name": "Figma", "logo": "logos/tools/figma.jpg", "group": "web" },
-  { "id": "claude", "name": "Claude", "logo": "logos/tools/claude.webp", "group": "ai" },
-  { "id": "gemini", "name": "Gemini", "logo": "logos/tools/gemini.webp", "group": "ai" }
+  {
+    "id": "yandex-direct",
+    "name": "Яндекс Директ",
+    "logo": "logos/tools/yandex-direct.png",
+    "group": "ads"
+  },
+  {
+    "id": "promopult",
+    "name": "PromoPult",
+    "logo": "logos/tools/promopult.webp",
+    "group": "ads"
+  },
+  {
+    "id": "click-ru",
+    "name": "click.ru",
+    "logo": "logos/tools/click-ru.webp",
+    "group": "ads"
+  },
+  {
+    "id": "yandex-webmaster",
+    "name": "Яндекс Вебмастер",
+    "logo": "logos/tools/yandex-webmaster.png",
+    "group": "seo"
+  },
+  {
+    "id": "google-search-console",
+    "name": "Google Search Console",
+    "logo": "logos/tools/google-search-console.webp",
+    "group": "seo"
+  },
+  {
+    "id": "mindbox",
+    "name": "Mindbox",
+    "logo": "logos/tools/mindbox.jpg",
+    "group": "crm"
+  },
+  {
+    "id": "bitrix24",
+    "name": "Битрикс24",
+    "logo": "logos/tools/bitrix24.webp",
+    "group": "crm"
+  },
+  {
+    "id": "mango-office",
+    "name": "Mango Office",
+    "logo": "logos/tools/mango-office.webp",
+    "group": "crm"
+  },
+  {
+    "id": "1c-bitrix",
+    "name": "1С-Битрикс",
+    "logo": "logos/tools/1c-bitrix.webp",
+    "group": "web"
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "logo": "logos/tools/figma.jpg",
+    "group": "web"
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "logo": "logos/tools/claude.webp",
+    "group": "ai"
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "logo": "logos/tools/gemini.webp",
+    "group": "ai"
+  },
+  {
+    "id": "nano-banana",
+    "name": "Nano Banana Pro (Google)",
+    "logo": "logos/tools/nano-banana.jpg",
+    "group": "ai"
+  }
 ]
