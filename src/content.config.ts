@@ -114,6 +114,19 @@ const tools = defineCollection({
   schema: z.object({ name: z.string(), logo: img, group: z.enum(['ads', 'seo', 'crm', 'web', 'ai']) }),
 });
 
+const sites = defineCollection({
+  loader: file('src/data/sites.json'),
+  schema: z.object({
+    name: z.string(),
+    url,
+    company: L,
+    tags: z.object({ ru: z.array(z.string()), en: z.array(z.string()) }),
+    description: L,
+    result: L.optional(),
+    image: img,
+  }),
+});
+
 const creatives = defineCollection({
   loader: file('src/data/creatives.json'),
   schema: z.object({ title: L, image: img.refine((s) => s.length > 0, 'Для креатива нужна картинка'), file: z.string().optional() }),
@@ -129,6 +142,7 @@ export const collections = {
   eventsRussia,
   media,
   brands,
+  sites,
   tools,
   creatives,
 };

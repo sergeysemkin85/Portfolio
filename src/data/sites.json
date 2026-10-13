@@ -1,0 +1,118 @@
+[
+  {
+    "id": "grainford",
+    "name": "grainford.ru",
+    "url": "",
+    "company": {
+      "ru": "Грейнфорд-Агро",
+      "en": "Grainford-Agro"
+    },
+    "tags": {
+      "ru": [
+        "B2B",
+        "Корпоративный сайт",
+        "GEO/AEO"
+      ],
+      "en": [
+        "B2B",
+        "Corporate website",
+        "GEO/AEO"
+      ]
+    },
+    "description": {
+      "ru": "Корпоративный сайт поставщика солода и пивоваренного ячменя, созданный своими силами: структура, тексты, фото, SEO и оптимизация под ответы нейросетей.",
+      "en": "Corporate website of a malt and brewing barley supplier, built in-house: structure, copy, photography, SEO and optimization for AI answers."
+    },
+    "result": {
+      "ru": "ТОП-5 Яндекса по 100 запросам, 100+ запросов КП за месяц",
+      "en": "Yandex top 5 for 100 queries, 100+ quote requests a month"
+    },
+    "image": "creatives/grainford-sunflowers.png"
+  },
+  {
+    "id": "inferit",
+    "name": "inferitcloud.ru",
+    "url": "https://inferitcloud.ru/",
+    "company": {
+      "ru": "ГК Softline",
+      "en": "Softline Group"
+    },
+    "tags": {
+      "ru": [
+        "B2B IT",
+        "Лидогенерация",
+        "Сквозная аналитика"
+      ],
+      "en": [
+        "B2B IT",
+        "Lead generation",
+        "End-to-end analytics"
+      ]
+    },
+    "description": {
+      "ru": "Сайт облачного продукта Инферит Облако: digital-стратегия, SEO, кросс-канальный лидген и сквозная аналитика.",
+      "en": "Website of the Inferit Cloud product: digital strategy, SEO, cross-channel lead generation and end-to-end analytics."
+    },
+    "result": {
+      "ru": "ТОП-3 Яндекса по 200+ запросам, органика +70%",
+      "en": "Yandex top 3 for 200+ queries, organic traffic +70%"
+    },
+    "image": "creatives/inferit-ad-1.png"
+  },
+  {
+    "id": "grainrus",
+    "name": "grainrus.com",
+    "url": "https://www.grainrus.com/",
+    "company": {
+      "ru": "ГК «Грейнрус»",
+      "en": "Grainrus Group"
+    },
+    "tags": {
+      "ru": [
+        "B2B",
+        "Экспорт",
+        "RU / EN"
+      ],
+      "en": [
+        "B2B",
+        "Export",
+        "RU / EN"
+      ]
+    },
+    "description": {
+      "ru": "Двуязычный B2B-сайт агрохолдинга, запущенный с нуля: структура, контент и подключение сервисов для экспортных продаж.",
+      "en": "Bilingual B2B website of an agricultural holding, launched from scratch: structure, content and integrations for export sales."
+    },
+    "image": "creatives/grainrus-25.webp"
+  },
+  {
+    "id": "malt-ru",
+    "name": "malt.ru",
+    "url": "https://malt.ru/",
+    "company": {
+      "ru": "ГК «Грейнрус»",
+      "en": "Grainrus Group"
+    },
+    "tags": {
+      "ru": [
+        "E-commerce",
+        "SEO",
+        "CDP Mindbox"
+      ],
+      "en": [
+        "E-commerce",
+        "SEO",
+        "Mindbox CDP"
+      ]
+    },
+    "description": {
+      "ru": "Перезапуск интернет-магазина товаров для пивоварения: SEO-стратегия, автоматизация email, SMS и push на Mindbox, продажи через мессенджеры.",
+      "en": "Relaunch of a brewing supplies online store: SEO strategy, email, SMS and push automation on Mindbox, sales via messengers."
+    },
+    "result": {
+      "ru": "Выручка ×3, ТОП-3 в категории",
+      "en": "Revenue ×3, top 3 in the category"
+    },
+    "image": "creatives/malt-ru-banner.png"
+  }
+]

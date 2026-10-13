@@ -15,9 +15,9 @@ const groups = (['ads', 'seo', 'crm', 'web', 'ai'] as const)
   .filter((g) => g.items.length);
 ---
 
-<section id="tools" class="section" aria-labelledby="tools-title">
+<section id="tools" class="section bg-surface-2/60" aria-labelledby="tools-title">
   <div class="container-x">
-    <SectionHeader eyebrow="10" title={u.toolsTitle} lead={u.toolsLead} id="tools-title" />
+    <SectionHeader eyebrow="11" title={u.toolsTitle} lead={u.toolsLead} id="tools-title" />
     <div class="mt-12 grid gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
       {
         groups.map((g) => (
