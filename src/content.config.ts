@@ -54,6 +54,8 @@ const companies = defineCollection({
     industry: L,
     /** Страна работы, выводится в таймлайне карьеры */
     country: L,
+    /** Срок работы. Если не задан, считается по годам из поля years */
+    duration: L.optional(),
     highlight: L,
     linkedinUrl: url,
     /** Данные со страницы компании в LinkedIn (обновляются вручную) */

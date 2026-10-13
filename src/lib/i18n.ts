@@ -185,3 +185,14 @@ export function formatDate(value: string, lang: Lang): string {
 export function formatNumber(n: number, lang: Lang): string {
   return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, lang === 'ru' ? ' ' : ',');
 }
+
+/** Срок работы по строке вида «2018–2024»: «6 лет» / «6 years». */
+export function yearsSpan(years: string, lang: Lang): string {
+  const [start, end] = years.split(/[–—-]/).map((s) => parseInt(s, 10));
+  const n = Math.max(1, (end || new Date().getFullYear()) - start);
+  if (lang === 'en') return `${n} ${n === 1 ? 'year' : 'years'}`;
+  const m10 = n % 10;
+  const m100 = n % 100;
+  const word = m10 === 1 && m100 !== 11 ? 'год' : m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14) ? 'года' : 'лет';
+  return `${n} ${word}`;
+}
