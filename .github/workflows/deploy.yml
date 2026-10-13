@@ -1,6 +1,7 @@
 # Публикация сайта на GitHub Pages при каждом push в ветку main.
 # Настройка: Settings → Pages → Source: GitHub Actions.
-# Settings → Secrets and variables → Actions → Variables:
+# Без настроек сайт собирается для адреса https://<логин>.github.io/<репозиторий>/.
+# Для своего домена: Settings → Secrets and variables → Actions → Variables:
 #   SITE_URL  — адрес сайта, например https://semkin.ru
 #   BASE_PATH — "/" для своего домена или "/имя-репозитория" без домена
 #   PUBLIC_YM_ID, PUBLIC_GA_ID — счётчики аналитики (необязательно)
@@ -32,8 +33,8 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          SITE_URL: ${{ vars.SITE_URL }}
-          BASE_PATH: ${{ vars.BASE_PATH }}
+          SITE_URL: ${{ vars.SITE_URL || format('https://{0}.github.io', github.repository_owner) }}
+          BASE_PATH: ${{ vars.BASE_PATH || format('/{0}', github.event.repository.name) }}
           PUBLIC_YM_ID: ${{ vars.PUBLIC_YM_ID }}
           PUBLIC_GA_ID: ${{ vars.PUBLIC_GA_ID }}
       - uses: actions/upload-pages-artifact@v3
