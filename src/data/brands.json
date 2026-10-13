@@ -34,6 +34,23 @@
     }
   },
   {
+    "id": "kursk-malt",
+    "name": "Курский солод",
+    "logo": "logos/brands/kursk-malt.png",
+    "category": {
+      "ru": "B2B, солод для пивоварения",
+      "en": "B2B, brewing malt"
+    },
+    "done": {
+      "ru": "Продвижение бренда солода: сайт, PR, выставки",
+      "en": "Malt brand promotion: website, PR, trade shows"
+    },
+    "metric": {
+      "ru": "Бренд ГК «Грейнрус»",
+      "en": "A Grainrus Group brand"
+    }
+  },
+  {
     "id": "inferit",
     "name": "Inferit Cloud",
     "logo": "logos/brands/inferit.webp",
