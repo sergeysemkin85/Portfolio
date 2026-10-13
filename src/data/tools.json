@@ -36,6 +36,24 @@
     "group": "seo"
   },
   {
+    "id": "yandex-metrika",
+    "name": "Яндекс Метрика",
+    "logo": "logos/tools/yandex-metrika.webp",
+    "group": "seo"
+  },
+  {
+    "id": "google-analytics",
+    "name": "Google Analytics",
+    "logo": "logos/tools/google-analytics.webp",
+    "group": "seo"
+  },
+  {
+    "id": "yandex-datalens",
+    "name": "Yandex DataLens",
+    "logo": "logos/tools/yandex-datalens.webp",
+    "group": "seo"
+  },
+  {
     "id": "mindbox",
     "name": "Mindbox",
     "logo": "logos/tools/mindbox.jpg",
