@@ -1,126 +1,14 @@
 [
   {
-    "id": "ecom-revenue",
-    "title": { "ru": "Выручка e-commerce ×{n}", "en": "E-commerce revenue ×{n}" },
-    "count": 3,
-    "company": { "ru": "ГК «Грейнрус»", "en": "Grainrus Group" },
-    "done": {
-      "ru": [
-        "Запустил с нуля двуязычный B2B-сайт grainrus.com и перезапустил интернет-магазин malt.ru.",
-        "Внедрил SEO-стратегию: ТОП-3 в категории товаров для пивоварения, трафик вырос в 3 раза."
-      ],
-      "en": [
-        "Launched the bilingual B2B website grainrus.com from scratch and relaunched the malt.ru online store.",
-        "Rolled out an SEO strategy: top 3 in the brewing supplies category, traffic grew 3x."
-      ]
-    },
-    "result": { "ru": "Выручка malt.ru выросла в 3 раза.", "en": "malt.ru revenue grew 3x." }
-  },
-  {
-    "id": "orders-automation",
-    "title": { "ru": "Заказы ×{n} через автоматизацию", "en": "Orders ×{n} through automation" },
-    "count": 4,
-    "company": { "ru": "ГК «Грейнрус»", "en": "Grainrus Group" },
-    "done": {
-      "ru": [
-        "Построил воронку продаж на CDP Mindbox с цепочками email, SMS и push.",
-        "Запустил продажи через WhatsApp и Telegram."
-      ],
-      "en": [
-        "Built a sales funnel on the Mindbox CDP with email, SMS and push sequences.",
-        "Launched sales via WhatsApp and Telegram."
-      ]
-    },
-    "result": {
-      "ru": "Заказы выросли в 4 раза (опт и розница), клиентская база в CRM — в 3 раза.",
-      "en": "Orders grew 4x (wholesale and retail), the CRM customer base grew 3x."
-    }
-  },
-  {
-    "id": "media-index",
-    "title": { "ru": "Медиаиндекс ×{n}", "en": "Media index ×{n}" },
-    "count": 10,
-    "company": { "ru": "ГК «Грейнрус»", "en": "Grainrus Group" },
-    "done": {
-      "ru": [
-        "Выстроил PR-функцию: питчи, пресс-релизы, мониторинг упоминаний и SERM.",
-        "Добился публикаций в РБК, РИА Новости, «Россия-24», «Агроинвесторе»."
-      ],
-      "en": [
-        "Built the PR function: pitches, press releases, media monitoring and SERM.",
-        "Secured coverage in RBC, RIA Novosti, Russia-24 and Agroinvestor."
-      ]
-    },
-    "result": {
-      "ru": "Медиаиндекс вырос с 300 до 3000, компанию цитировали 250 федеральных и 5 зарубежных СМИ, охват до 45 млн человек.",
-      "en": "The media index rose from 300 to 3,000; the company was cited by 250 federal and 5 international outlets, with a reach of up to 45 million people."
-    }
-  },
-  {
-    "id": "exporter-of-the-year",
-    "title": { "ru": "«Экспортёр года {n}»", "en": "“Exporter of the Year {n}”" },
-    "count": 2023,
-    "animate": false,
-    "company": { "ru": "ГК «Грейнрус»", "en": "Grainrus Group" },
-    "done": {
-      "ru": [
-        "Проводил до 20 мероприятий в год: форумы, выставки и бизнес-миссии в РФ, СНГ, Азии и Африке.",
-        "Выстроил партнёрства с РЭЦ, МЭЦ и Росбиотехом, которые компенсировали до 100% затрат на выставки."
-      ],
-      "en": [
-        "Ran up to 20 events a year: forums, trade shows and business missions in Russia, the CIS, Asia and Africa.",
-        "Built partnerships with the Russian Export Center, the Moscow Export Center and Rosbiotech that covered up to 100% of trade show costs."
-      ]
-    },
-    "result": {
-      "ru": "Экспортные контракты в Азии, победа в номинации «Экспортёр года 2023», шорт-лист «Агроинвестор года 2022».",
-      "en": "Export contracts in Asia, winner of “Exporter of the Year 2023”, shortlisted for “Agroinvestor of the Year 2022”."
-    }
-  },
-  {
-    "id": "b2b-leads",
-    "title": { "ru": "B2B-заявки ×{n} за год", "en": "B2B leads ×{n} in one year" },
-    "count": 20,
-    "company": { "ru": "InBody (медицинское и спортивное оборудование)", "en": "InBody (medical and fitness equipment)" },
-    "done": {
-      "ru": [
-        "С нуля построил лидогенерацию: сайт на Битриксе, CRM Битрикс24, email-автоматизацию.",
-        "Масштабировал обучающий хаб InBody Academy, посещаемость выросла в 6 раз."
-      ],
-      "en": [
-        "Built lead generation from scratch: a Bitrix website, Bitrix24 CRM and email automation.",
-        "Scaled the InBody Academy training hub; attendance grew 6x."
-      ]
-    },
-    "result": {
-      "ru": "Заявки выросли в 20 раз, трафик в 4 раза, получена награда на форуме Global Fitness Expert.",
-      "en": "Leads grew 20x, traffic 4x; received an award at the Global Fitness Expert forum."
-    }
-  },
-  {
-    "id": "crm-contacts",
-    "title": { "ru": "CRM: от 0 до {n} B2B-контактов", "en": "CRM: from 0 to {n} B2B contacts" },
-    "count": 2000,
-    "company": { "ru": "Softline, облачный продукт inferitcloud.ru", "en": "Softline, cloud product inferitcloud.ru" },
-    "done": {
-      "ru": [
-        "Разработал digital-стратегию для нового B2B-продукта и запустил кросс-канальный лидген: SEO, Директ, VK Ads, SberAds, email.",
-        "Настроил сквозную аналитику."
-      ],
-      "en": [
-        "Developed a digital strategy for a new B2B product and launched cross-channel lead generation: SEO, Yandex Direct, VK Ads, SberAds, email.",
-        "Set up end-to-end analytics."
-      ]
-    },
-    "result": {
-      "ru": "ТОП-3 Яндекса по 200+ запросам, органика +70%, стоимость лида −20%, план по лидам выполнен.",
-      "en": "Top 3 in Yandex for 200+ queries, organic traffic +70%, cost per lead −20%, lead target met."
-    }
-  },
-  {
     "id": "ai-answers",
-    "title": { "ru": "Сайт в ответах нейросетей", "en": "Website featured in AI answers" },
-    "company": { "ru": "Грейнфорд-Агро", "en": "Grainford-Agro" },
+    "title": {
+      "ru": "Сайт в ответах нейросетей",
+      "en": "Website featured in AI answers"
+    },
+    "company": {
+      "ru": "Грейнфорд-Агро",
+      "en": "Grainford-Agro"
+    },
     "done": {
       "ru": [
         "Своими силами создал корпоративный сайт: тексты, фото, SEO.",
@@ -138,8 +26,14 @@
   },
   {
     "id": "data-driven",
-    "title": { "ru": "Маркетинг на данных", "en": "Data-driven marketing" },
-    "company": { "ru": "Грейнфорд-Агро", "en": "Grainford-Agro" },
+    "title": {
+      "ru": "Маркетинг на данных",
+      "en": "Data-driven marketing"
+    },
+    "company": {
+      "ru": "Грейнфорд-Агро",
+      "en": "Grainford-Agro"
+    },
     "done": {
       "ru": [
         "Внедрил BI на Яндекс DataLens с автоматическими дашбордами и отчётами.",
@@ -158,9 +52,172 @@
     }
   },
   {
+    "id": "crm-contacts",
+    "title": {
+      "ru": "CRM: от 0 до {n} B2B-контактов",
+      "en": "CRM: from 0 to {n} B2B contacts"
+    },
+    "count": 2000,
+    "company": {
+      "ru": "Softline, облачный продукт inferitcloud.ru",
+      "en": "Softline, cloud product inferitcloud.ru"
+    },
+    "done": {
+      "ru": [
+        "Разработал digital-стратегию для нового B2B-продукта и запустил кросс-канальный лидген: SEO, Директ, VK Ads, SberAds, email.",
+        "Настроил сквозную аналитику."
+      ],
+      "en": [
+        "Developed a digital strategy for a new B2B product and launched cross-channel lead generation: SEO, Yandex Direct, VK Ads, SberAds, email.",
+        "Set up end-to-end analytics."
+      ]
+    },
+    "result": {
+      "ru": "ТОП-3 Яндекса по 200+ запросам, органика +70%, стоимость лида −20%, план по лидам выполнен.",
+      "en": "Top 3 in Yandex for 200+ queries, organic traffic +70%, cost per lead −20%, lead target met."
+    }
+  },
+  {
+    "id": "ecom-revenue",
+    "title": {
+      "ru": "Выручка e-commerce ×{n}",
+      "en": "E-commerce revenue ×{n}"
+    },
+    "count": 3,
+    "company": {
+      "ru": "ГК «Грейнрус»",
+      "en": "Grainrus Group"
+    },
+    "done": {
+      "ru": [
+        "Запустил с нуля двуязычный B2B-сайт grainrus.com и перезапустил интернет-магазин malt.ru.",
+        "Внедрил SEO-стратегию: ТОП-3 в категории товаров для пивоварения, трафик вырос в 3 раза."
+      ],
+      "en": [
+        "Launched the bilingual B2B website grainrus.com from scratch and relaunched the malt.ru online store.",
+        "Rolled out an SEO strategy: top 3 in the brewing supplies category, traffic grew 3x."
+      ]
+    },
+    "result": {
+      "ru": "Выручка malt.ru выросла в 3 раза.",
+      "en": "malt.ru revenue grew 3x."
+    }
+  },
+  {
+    "id": "orders-automation",
+    "title": {
+      "ru": "Заказы ×{n} через автоматизацию",
+      "en": "Orders ×{n} through automation"
+    },
+    "count": 4,
+    "company": {
+      "ru": "ГК «Грейнрус»",
+      "en": "Grainrus Group"
+    },
+    "done": {
+      "ru": [
+        "Построил воронку продаж на CDP Mindbox с цепочками email, SMS и push.",
+        "Запустил продажи через WhatsApp и Telegram."
+      ],
+      "en": [
+        "Built a sales funnel on the Mindbox CDP with email, SMS and push sequences.",
+        "Launched sales via WhatsApp and Telegram."
+      ]
+    },
+    "result": {
+      "ru": "Заказы выросли в 4 раза (опт и розница), клиентская база в CRM — в 3 раза.",
+      "en": "Orders grew 4x (wholesale and retail), the CRM customer base grew 3x."
+    }
+  },
+  {
+    "id": "media-index",
+    "title": {
+      "ru": "Медиаиндекс ×{n}",
+      "en": "Media index ×{n}"
+    },
+    "count": 10,
+    "company": {
+      "ru": "ГК «Грейнрус»",
+      "en": "Grainrus Group"
+    },
+    "done": {
+      "ru": [
+        "Выстроил PR-функцию: питчи, пресс-релизы, мониторинг упоминаний и SERM.",
+        "Добился публикаций в РБК, РИА Новости, «Россия-24», «Агроинвесторе»."
+      ],
+      "en": [
+        "Built the PR function: pitches, press releases, media monitoring and SERM.",
+        "Secured coverage in RBC, RIA Novosti, Russia-24 and Agroinvestor."
+      ]
+    },
+    "result": {
+      "ru": "Медиаиндекс вырос с 300 до 3000, компанию цитировали 250 федеральных и 5 зарубежных СМИ, охват до 45 млн человек.",
+      "en": "The media index rose from 300 to 3,000; the company was cited by 250 federal and 5 international outlets, with a reach of up to 45 million people."
+    }
+  },
+  {
+    "id": "exporter-of-the-year",
+    "title": {
+      "ru": "«Экспортёр года {n}»",
+      "en": "“Exporter of the Year {n}”"
+    },
+    "count": 2023,
+    "animate": false,
+    "company": {
+      "ru": "ГК «Грейнрус»",
+      "en": "Grainrus Group"
+    },
+    "done": {
+      "ru": [
+        "Проводил до 20 мероприятий в год: форумы, выставки и бизнес-миссии в РФ, СНГ, Азии и Африке.",
+        "Выстроил партнёрства с РЭЦ, МЭЦ и Росбиотехом, которые компенсировали до 100% затрат на выставки."
+      ],
+      "en": [
+        "Ran up to 20 events a year: forums, trade shows and business missions in Russia, the CIS, Asia and Africa.",
+        "Built partnerships with the Russian Export Center, the Moscow Export Center and Rosbiotech that covered up to 100% of trade show costs."
+      ]
+    },
+    "result": {
+      "ru": "Экспортные контракты в Азии, победа в номинации «Экспортёр года 2023», шорт-лист «Агроинвестор года 2022».",
+      "en": "Export contracts in Asia, winner of “Exporter of the Year 2023”, shortlisted for “Agroinvestor of the Year 2022”."
+    }
+  },
+  {
+    "id": "b2b-leads",
+    "title": {
+      "ru": "B2B-заявки ×{n} за год",
+      "en": "B2B leads ×{n} in one year"
+    },
+    "count": 20,
+    "company": {
+      "ru": "InBody (медицинское и спортивное оборудование)",
+      "en": "InBody (medical and fitness equipment)"
+    },
+    "done": {
+      "ru": [
+        "С нуля построил лидогенерацию: сайт на Битриксе, CRM Битрикс24, email-автоматизацию.",
+        "Масштабировал обучающий хаб InBody Academy, посещаемость выросла в 6 раз."
+      ],
+      "en": [
+        "Built lead generation from scratch: a Bitrix website, Bitrix24 CRM and email automation.",
+        "Scaled the InBody Academy training hub; attendance grew 6x."
+      ]
+    },
+    "result": {
+      "ru": "Заявки выросли в 20 раз, трафик в 4 раза, получена награда на форуме Global Fitness Expert.",
+      "en": "Leads grew 20x, traffic 4x; received an award at the Global Fitness Expert forum."
+    }
+  },
+  {
     "id": "international-brand",
-    "title": { "ru": "Маркетинг международного бренда в России", "en": "Marketing an international brand in Russia" },
-    "company": { "ru": "AMC (Швейцария) и Nu Skin", "en": "AMC (Switzerland) and Nu Skin" },
+    "title": {
+      "ru": "Маркетинг международного бренда в России",
+      "en": "Marketing an international brand in Russia"
+    },
+    "company": {
+      "ru": "AMC (Швейцария) и Nu Skin",
+      "en": "AMC (Switzerland) and Nu Skin"
+    },
     "done": {
       "ru": [
         "В AMC отвечал за маркетинг российского подразделения с прямым подчинением головному офису: до 15 мероприятий в год на 300–400 человек.",
