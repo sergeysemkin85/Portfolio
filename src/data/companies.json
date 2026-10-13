@@ -23,7 +23,23 @@
       "ru": "Сайт в ответах ИИ по 30 запросам, ТОП-5 Яндекса",
       "en": "Website in AI answers for 30 queries, Yandex top 5"
     },
-    "linkedinUrl": "https://www.linkedin.com/company/grainford-agro/"
+    "linkedinUrl": "https://www.linkedin.com/company/grainford-agro/",
+    "linkedin": {
+      "headline": {
+        "ru": "Поставщик пивоваренного ячменя и солода | Торговый партнёр «Авангард-Агро», крупнейшего производителя солода в России (500 тыс. тонн)",
+        "en": "Brewing Barley & Malt Supplier | Trade Partner of Avangard-Agro - Russia's #1 Malt Producer by Malt Capacity (500K Tons)"
+      },
+      "industry": {
+        "ru": "Услуги предприятий питания",
+        "en": "Food and Beverage Services"
+      },
+      "location": {
+        "ru": "Москва, Россия",
+        "en": "Moscow, Russia"
+      },
+      "followers": 11,
+      "employees": "11–50"
+    }
   },
   {
     "id": "softline",
@@ -49,7 +65,23 @@
       "ru": "CRM 0 → 2 000 B2B-контактов",
       "en": "CRM 0 → 2,000 B2B contacts"
     },
-    "linkedinUrl": "https://www.linkedin.com/company/softline-company/"
+    "linkedinUrl": "https://www.linkedin.com/company/softline-company/",
+    "linkedin": {
+      "headline": {
+        "ru": "Один из лидеров IT-рынка России с более чем 30-летним опытом",
+        "en": "One of the IT market leaders in Russia with over 30 years of experience"
+      },
+      "industry": {
+        "ru": "IT-услуги и консалтинг",
+        "en": "IT Services and IT Consulting"
+      },
+      "location": {
+        "ru": "Москва, Россия",
+        "en": "Moscow, Russia"
+      },
+      "followers": 57014,
+      "employees": "5 001–10 000"
+    }
   },
   {
     "id": "grainrus",
@@ -75,7 +107,23 @@
       "ru": "Выручка e-com ×3, «Экспортёр года 2023»",
       "en": "E-com revenue ×3, “Exporter of the Year 2023”"
     },
-    "linkedinUrl": "https://www.linkedin.com/company/grainrus/"
+    "linkedinUrl": "https://www.linkedin.com/company/grainrus/",
+    "linkedin": {
+      "headline": {
+        "ru": "Агрохолдинг: зерновые и масличные культуры, фермерство, хмелеводство, производство солода, торговля зерном",
+        "en": "Agricultural holding: grain crops, oilseeds production, farming, hop growing, malt production, grain trading"
+      },
+      "industry": {
+        "ru": "Услуги предприятий питания",
+        "en": "Food and Beverage Services"
+      },
+      "location": {
+        "ru": "Москва, Россия",
+        "en": "Moscow, Russia"
+      },
+      "followers": 309,
+      "employees": "1 001–5 000"
+    }
   },
   {
     "id": "inbody",
@@ -101,7 +149,23 @@
       "ru": "B2B-заявки ×20",
       "en": "B2B leads ×20"
     },
-    "linkedinUrl": "https://www.linkedin.com/company/inbodyglobal/"
+    "linkedinUrl": "https://www.linkedin.com/company/inbodyglobal/",
+    "linkedin": {
+      "headline": {
+        "ru": "Мировой производитель анализаторов состава тела",
+        "en": "Global manufacturer of body composition analyzers"
+      },
+      "industry": {
+        "ru": "Производство медицинского оборудования",
+        "en": "Medical Equipment Manufacturing"
+      },
+      "location": {
+        "ru": "Сеул, Южная Корея",
+        "en": "Seoul, South Korea"
+      },
+      "followers": 2206,
+      "employees": "1 001–5 000"
+    }
   },
   {
     "id": "amc",
@@ -127,7 +191,23 @@
       "ru": "До 15 мероприятий в год на 300–400 гостей",
       "en": "Up to 15 events a year for 300–400 guests"
     },
-    "linkedinUrl": "https://www.linkedin.com/company/amc-international/"
+    "linkedinUrl": "https://www.linkedin.com/company/amc-international/",
+    "linkedin": {
+      "headline": {
+        "ru": "Лидер рынка высококачественной посуды из нержавеющей стали",
+        "en": "Market leader in high-quality stainless steel cookware"
+      },
+      "industry": {
+        "ru": "Производство",
+        "en": "Manufacturing"
+      },
+      "location": {
+        "ru": "Ротркойц, Швейцария",
+        "en": "Rotkreuz, Switzerland"
+      },
+      "followers": 1858,
+      "employees": "10 001+"
+    }
   },
   {
     "id": "nuskin",
@@ -153,7 +233,23 @@
       "ru": "Дистрибьюторы ×3, продажи ×2",
       "en": "Distributors ×3, sales ×2"
     },
-    "linkedinUrl": "https://www.linkedin.com/company/nu-skin-enterprises/"
+    "linkedinUrl": "https://www.linkedin.com/company/nu-skin-enterprises/",
+    "linkedin": {
+      "headline": {
+        "ru": "Компания в сфере красоты и здоровья с платформой партнёрских возможностей",
+        "en": "A leading beauty and wellness company, powered by a dynamic affiliate opportunity platform"
+      },
+      "industry": {
+        "ru": "Производство средств личной гигиены",
+        "en": "Personal Care Product Manufacturing"
+      },
+      "location": {
+        "ru": "Прово, Юта, США",
+        "en": "Provo, Utah, USA"
+      },
+      "followers": 89410,
+      "employees": "1 001–5 000"
+    }
   },
   {
     "id": "ibs",
@@ -179,6 +275,22 @@
       "ru": "Критические инциденты −50%",
       "en": "Critical incidents −50%"
     },
-    "linkedinUrl": "https://www.linkedin.com/company/ibs-company/"
+    "linkedinUrl": "https://www.linkedin.com/company/ibs-company/",
+    "linkedin": {
+      "headline": {
+        "ru": "Крупный российский разработчик комплексных IT-решений",
+        "en": "Large Russian developer of complex IT solutions"
+      },
+      "industry": {
+        "ru": "IT-услуги и консалтинг",
+        "en": "IT Services and IT Consulting"
+      },
+      "location": {
+        "ru": "Москва, Россия",
+        "en": "Moscow, Russia"
+      },
+      "followers": 17899,
+      "employees": "1 001–5 000"
+    }
   }
 ]

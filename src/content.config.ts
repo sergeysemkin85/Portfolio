@@ -54,6 +54,16 @@ const companies = defineCollection({
     industry: L,
     highlight: L,
     linkedinUrl: url,
+    /** Данные со страницы компании в LinkedIn (обновляются вручную) */
+    linkedin: z
+      .object({
+        headline: L,
+        industry: L,
+        location: L,
+        followers: z.number().int().nonnegative(),
+        employees: z.string(),
+      })
+      .optional(),
   }),
 });
 

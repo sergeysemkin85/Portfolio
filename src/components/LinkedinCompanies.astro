@@ -4,7 +4,7 @@ import SectionHeader from './SectionHeader.astro';
 import Carousel from './Carousel.astro';
 import Logo from './Logo.astro';
 import Icon from './Icon.astro';
-import { ui, type Lang } from '../lib/i18n';
+import { ui, formatNumber, type Lang } from '../lib/i18n';
 
 interface Props {
   lang: Lang;
@@ -24,14 +24,38 @@ const companies = await getCollection('companies');
             <article class="card logo-hover flex h-full flex-col p-5">
               <Logo src={data.logo} alt={data.name[lang]} height={80} class="w-full border border-line" />
               <h3 class="mt-5 text-lg font-semibold">{data.name[lang]}</h3>
-              <p class="mt-1 text-sm text-muted">{data.industry[lang]}</p>
-              <p class="mt-3 text-sm">
+              {data.linkedin ? (
+                <>
+                  <p class="mt-2 line-clamp-3 text-sm leading-snug text-muted" title={data.linkedin.headline[lang]}>{data.linkedin.headline[lang]}</p>
+                  <dl class="mt-4 grid grid-cols-2 gap-x-3 gap-y-2.5 rounded-xl bg-surface-2 p-3 text-xs">
+                    <div class="col-span-2">
+                      <dt class="text-muted">{u.liIndustry}</dt>
+                      <dd class="font-semibold">{data.linkedin.industry[lang]}</dd>
+                    </div>
+                    <div class="col-span-2">
+                      <dt class="text-muted">{u.liLocation}</dt>
+                      <dd class="font-semibold">{data.linkedin.location[lang]}</dd>
+                    </div>
+                    <div>
+                      <dt class="text-muted">{u.liFollowers}</dt>
+                      <dd class="font-semibold tabular-nums">{formatNumber(data.linkedin.followers, lang)}</dd>
+                    </div>
+                    <div>
+                      <dt class="text-muted">{u.liEmployees}</dt>
+                      <dd class="font-semibold tabular-nums">{data.linkedin.employees}</dd>
+                    </div>
+                  </dl>
+                </>
+              ) : (
+                <p class="mt-1 text-sm text-muted">{data.industry[lang]}</p>
+              )}
+              <p class="mt-4 text-sm">
                 <span class="font-semibold text-brand tabular-nums">{data.years}</span> · {data.role[lang]}
               </p>
               <p class="mt-3 border-t border-line pt-3 text-sm font-medium">{data.highlight[lang]}</p>
               <div class="mt-auto pt-5">
                 {data.linkedinUrl ? (
-                  <a href={data.linkedinUrl} target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm w-full" data-goal="click_linkedin_company">
+                  <a href={data.linkedinUrl} target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm w-full !px-3 !text-[0.8rem] whitespace-nowrap" data-goal="click_linkedin_company">
                     <Icon name="linkedin" size={16} />
                     {u.companyProfile}
                   </a>
