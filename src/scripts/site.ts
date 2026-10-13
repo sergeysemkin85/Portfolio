@@ -199,7 +199,11 @@ function initModals() {
       iframe.title = opts.title;
       iframe.loading = 'lazy';
       iframe.className = 'h-full w-full rounded-lg bg-white';
-      if (opts.kind === 'embed') iframe.setAttribute('allowfullscreen', '');
+      if (opts.kind === 'embed') {
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture; fullscreen');
+        iframe.className = 'h-full w-full rounded-lg bg-black';
+      }
       frame.append(iframe);
     }
     download.hidden = !opts.download;

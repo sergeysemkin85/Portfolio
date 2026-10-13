@@ -29,19 +29,28 @@ const items = await Promise.all(
         items.map((c) => {
           const title = c.title[lang];
           const isPdf = Boolean(c.file);
+          const isVideo = Boolean(c.video);
           return (
             <li class="reveal mb-3 break-inside-avoid sm:mb-4">
               <button
                 type="button"
                 class="group relative block w-full overflow-hidden rounded-xl border border-line bg-surface text-left"
                 data-open-viewer
-                data-kind={isPdf ? 'pdf' : 'image'}
-                data-src={isPdf ? withBase(c.file!) : c.large}
+                data-kind={isVideo ? 'embed' : isPdf ? 'pdf' : 'image'}
+                data-src={isVideo ? c.video : isPdf ? withBase(c.file!) : c.large}
                 data-title={title}
                 data-download={isPdf ? 'true' : 'false'}
                 data-download-goal="download_file"
+                data-goal={isVideo ? 'play_video' : undefined}
               >
                 <Image src={c.img} alt={title} widths={[300, 480, 640]} sizes="(min-width:1280px) 22vw, (min-width:768px) 30vw, 46vw" class="w-full transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" />
+                {isVideo && (
+                  <span aria-hidden="true" class="absolute inset-0 flex items-center justify-center">
+                    <span class="flex h-14 w-14 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur transition-transform group-hover:scale-110">
+                      <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z" /></svg>
+                    </span>
+                  </span>
+                )}
                 <span class="absolute inset-x-0 bottom-0 flex items-end gap-2 bg-gradient-to-t from-black/80 to-transparent p-3 pt-10 text-xs leading-snug font-medium text-white sm:text-sm">
                   {isPdf && <Icon name="file" size={16} class="shrink-0" />}
                   {title}

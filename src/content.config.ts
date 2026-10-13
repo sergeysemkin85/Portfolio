@@ -129,7 +129,14 @@ const sites = defineCollection({
 
 const creatives = defineCollection({
   loader: file('src/data/creatives.json'),
-  schema: z.object({ title: L, image: img.refine((s) => s.length > 0, 'Для креатива нужна картинка'), file: z.string().optional() }),
+  schema: z.object({
+    title: L,
+    image: img.refine((s) => s.length > 0, 'Для креатива нужна картинка'),
+    /** PDF в public, открывается в окне */
+    file: z.string().optional(),
+    /** Ссылка для встраивания видео (YouTube embed), открывается в окне */
+    video: z.string().url().optional(),
+  }),
 });
 
 export const collections = {
