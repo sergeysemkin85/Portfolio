@@ -1,5 +1,8 @@
 {
-  "name": { "ru": "Сергей Семкин", "en": "Sergey Semkin" },
+  "name": {
+    "ru": "Сергей Семкин",
+    "en": "Sergey Semkin"
+  },
   "position": {
     "ru": "Директор по маркетингу | B2B, E-com, экспорт",
     "en": "Chief Marketing Officer | B2B, E-commerce, Export"
@@ -8,24 +11,71 @@
     "ru": "Выстраиваю маркетинг, который приносит заявки и выручку: от стратегии и бюджета до сайта, CRM, PR и международных выставок.",
     "en": "I build marketing that brings in leads and revenue: from strategy and budget to website, CRM, PR and international trade shows."
   },
-  "location": { "ru": "Москва", "en": "Moscow, Russia" },
+  "location": {
+    "ru": "Москва",
+    "en": "Moscow, Russia"
+  },
   "photo": "photo.jpg",
   "resume": "/resume-semkin.pdf",
   "stats": [
-    { "count": 12, "prefix": "", "suffix": { "ru": "+ лет", "en": "+ years" }, "label": { "ru": "руководства маркетингом", "en": "leading marketing teams" } },
-    { "count": 30, "prefix": "", "suffix": { "ru": "+ млн ₽", "en": "M+ RUB" }, "label": { "ru": "годовой бюджет под управлением", "en": "annual budget under management" } },
-    { "count": 250, "prefix": "", "suffix": { "ru": "+ СМИ", "en": "+ media" }, "label": { "ru": "цитировали компанию, включая 5 зарубежных", "en": "outlets cited the company, including 5 international" } },
-    { "count": 3, "prefix": "×", "suffix": { "ru": "", "en": "" }, "label": { "ru": "рост выручки e-commerce", "en": "e-commerce revenue growth" } }
+    {
+      "count": 12,
+      "prefix": "",
+      "suffix": {
+        "ru": "+ лет",
+        "en": "+ years"
+      },
+      "label": {
+        "ru": "руководства маркетингом",
+        "en": "leading marketing teams"
+      }
+    },
+    {
+      "count": 30,
+      "prefix": "",
+      "suffix": {
+        "ru": "+ млн ₽",
+        "en": "M+ RUB"
+      },
+      "label": {
+        "ru": "годовой бюджет под управлением",
+        "en": "annual budget under management"
+      }
+    },
+    {
+      "count": 250,
+      "prefix": "",
+      "suffix": {
+        "ru": "+ СМИ",
+        "en": "+ media"
+      },
+      "label": {
+        "ru": "цитировали компанию, включая 5 зарубежных",
+        "en": "outlets cited the company, including 5 international"
+      }
+    },
+    {
+      "count": 3,
+      "prefix": "×",
+      "suffix": {
+        "ru": "",
+        "en": ""
+      },
+      "label": {
+        "ru": "рост выручки e-commerce",
+        "en": "e-commerce revenue growth"
+      }
+    }
   ],
   "about": {
     "ru": [
       "Руковожу маркетингом полного цикла в B2B и e-commerce. Опыт охватывает агросектор, IT, медицинское оборудование, FMCG и экспортные проекты.",
-      "В трёх компаниях отвечал за маркетинг целиком: бюджет, выбор каналов, подрядчиков и команду до 10 человек, с отчётностью перед генеральным директором и головным офисом.",
+      "Опыт выстраивания маркетинговой функции с нуля до управления всем маркетингом: бюджет, выбор каналов, подрядчиков и управление командой до 10 человек, с отчётностью перед управляющим и головным офисом в Европе.",
       "Сильная сторона — связка digital и офлайна: SEO, контекстная реклама, CRM и сквозная аналитика работают вместе с PR, выставками и партнёрским маркетингом."
     ],
     "en": [
       "I lead full-cycle marketing in B2B and e-commerce, with experience across agribusiness, IT, medical equipment, FMCG and export projects.",
-      "In three companies I owned marketing end to end: budget, channel mix, agencies and a team of up to 10 people, reporting to the CEO and the head office.",
+      "Experience building the marketing function from scratch to running all of marketing: budget, channel mix, agencies and managing a team of up to 10 people, reporting to the managing director and the head office in Europe.",
       "My strength is combining digital and offline: SEO, paid search, CRM and end-to-end analytics working together with PR, trade shows and partner marketing."
     ]
   },
