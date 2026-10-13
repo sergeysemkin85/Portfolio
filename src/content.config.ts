@@ -52,6 +52,8 @@ const companies = defineCollection({
     role: L,
     realTitle: L,
     industry: L,
+    /** Страна работы, выводится в таймлайне карьеры */
+    country: L,
     highlight: L,
     linkedinUrl: url,
     /** Данные со страницы компании в LinkedIn (обновляются вручную) */

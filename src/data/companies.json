@@ -19,6 +19,10 @@
       "ru": "Агро, ВЭД, логистика",
       "en": "Agribusiness, foreign trade, logistics"
     },
+    "country": {
+      "ru": "Россия",
+      "en": "Russia"
+    },
     "highlight": {
       "ru": "Сайт в ответах ИИ по 30 запросам, ТОП-5 Яндекса",
       "en": "Website in AI answers for 30 queries, Yandex top 5"
@@ -60,6 +64,10 @@
     "industry": {
       "ru": "IT, облачные сервисы",
       "en": "IT, cloud services"
+    },
+    "country": {
+      "ru": "Россия",
+      "en": "Russia"
     },
     "highlight": {
       "ru": "CRM 0 → 2 000 B2B-контактов",
@@ -103,6 +111,10 @@
       "ru": "Агро, пищевое производство, экспорт",
       "en": "Agribusiness, food production, export"
     },
+    "country": {
+      "ru": "Россия",
+      "en": "Russia"
+    },
     "highlight": {
       "ru": "Выручка e-com ×3, «Экспортёр года 2023»",
       "en": "E-com revenue ×3, “Exporter of the Year 2023”"
@@ -144,6 +156,10 @@
     "industry": {
       "ru": "Медицинское и спортивное оборудование",
       "en": "Medical and fitness equipment"
+    },
+    "country": {
+      "ru": "Южная Корея",
+      "en": "South Korea"
     },
     "highlight": {
       "ru": "B2B-заявки ×20",
@@ -187,6 +203,10 @@
       "ru": "Премиальная посуда, товары для дома",
       "en": "Premium cookware, home goods"
     },
+    "country": {
+      "ru": "Швейцария",
+      "en": "Switzerland"
+    },
     "highlight": {
       "ru": "До 15 мероприятий в год на 300–400 гостей",
       "en": "Up to 15 events a year for 300–400 guests"
@@ -229,6 +249,10 @@
       "ru": "FMCG, beauty",
       "en": "FMCG, beauty"
     },
+    "country": {
+      "ru": "США",
+      "en": "USA"
+    },
     "highlight": {
       "ru": "Дистрибьюторы ×3, продажи ×2",
       "en": "Distributors ×3, sales ×2"
@@ -270,6 +294,10 @@
     "industry": {
       "ru": "IT, системная интеграция",
       "en": "IT, systems integration"
+    },
+    "country": {
+      "ru": "Россия",
+      "en": "Russia"
     },
     "highlight": {
       "ru": "Критические инциденты −50%",
