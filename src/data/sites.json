@@ -27,7 +27,10 @@
       "ru": "ТОП-5 Яндекса по 100 запросам, 100+ запросов КП за месяц",
       "en": "Yandex top 5 for 100 queries, 100+ quote requests a month"
     },
-    "image": "creatives/grainford-sunflowers.png"
+    "image": "sites/grainford.webp",
+    "siteTitle": "Купить солод оптом напрямую с солодовенных заводов производителя «Авангард-Агро»",
+    "siteDescription": "Купить солод оптом напрямую с солодовен ведущего российского производителя солода «Авангард-Агро».",
+    "favicon": "sites/grainford-favicon.png"
   },
   {
     "id": "inferit",
@@ -57,12 +60,15 @@
       "ru": "ТОП-3 Яндекса по 200+ запросам, органика +70%",
       "en": "Yandex top 3 for 200+ queries, organic traffic +70%"
     },
-    "image": "creatives/inferit-ad-1.png"
+    "image": "sites/inferit.webp",
+    "siteTitle": "Инферит Облако — импортонезависимое облако для бизнеса",
+    "siteDescription": "Российский облачный провайдер на собственном оборудовании и ПО: облачные и выделенные серверы, частное облако, резервное копирование.",
+    "favicon": "sites/inferit-favicon.png"
   },
   {
     "id": "grainrus",
     "name": "grainrus.com",
-    "url": "https://www.grainrus.com/",
+    "url": "https://grainrus.com/",
     "company": {
       "ru": "ГК «Грейнрус»",
       "en": "Grainrus Group"
@@ -83,7 +89,10 @@
       "ru": "Двуязычный B2B-сайт агрохолдинга, запущенный с нуля: структура, контент и подключение сервисов для экспортных продаж.",
       "en": "Bilingual B2B website of an agricultural holding, launched from scratch: structure, content and integrations for export sales."
     },
-    "image": "creatives/grainrus-25.webp"
+    "image": "sites/grainrus.webp",
+    "siteTitle": "Грейнрус — агропромышленный холдинг",
+    "siteDescription": "Направлениями бизнеса компании являются производство и продажа сырья для пивоваренной отрасли, сельское хозяйство, семеноводство и растениеводство зерновых и масличных культур, зерновой трейдинг, перевалка и хранение сельскохозяйственных культур.",
+    "favicon": "sites/grainrus-favicon.png"
   },
   {
     "id": "malt-ru",
@@ -113,6 +122,9 @@
       "ru": "Выручка ×3, ТОП-3 в категории",
       "en": "Revenue ×3, top 3 in the category"
     },
-    "image": "creatives/malt-ru-banner.png"
+    "image": "sites/malt-ru.webp",
+    "siteTitle": "Интернет-магазин для пивовара ТПК «Грейнрус»: купить солод, хмель, дрожжи оборудование для домашнего пивоварения оптом и в розницу с доставкой",
+    "siteDescription": "ТПК «Грейнрус» реализует широкий ассортимент продукции для пивоварения по ценам от производителя: солод, хмель, дрожжи, оборудование. Более 20 лет на российском рынке пивной промышленности! Удобная доставка по всей стране.",
+    "favicon": "sites/malt-ru-favicon.png"
   }
 ]

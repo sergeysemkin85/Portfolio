@@ -124,6 +124,10 @@ const sites = defineCollection({
     description: L,
     result: L.optional(),
     image: img,
+    /** Данные с самого сайта: фавикон, title и description */
+    favicon: img.optional(),
+    siteTitle: z.string().optional(),
+    siteDescription: z.string().optional(),
   }),
 });
 
