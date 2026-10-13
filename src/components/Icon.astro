@@ -1,0 +1,50 @@
+---
+interface Props {
+  name: 'linkedin' | 'telegram' | 'vk' | 'globe' | 'mail' | 'download' | 'arrow-left' | 'arrow-right' | 'sun' | 'moon' | 'menu' | 'close' | 'external' | 'trophy' | 'file' | 'setka' | 'pin' | 'calendar' | 'eye' | 'check';
+  class?: string;
+  size?: number;
+}
+const { name, class: cls = '', size = 20 } = Astro.props;
+
+const stroke: Record<string, string> = {
+  globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+  download: '<path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/>',
+  'arrow-left': '<path d="M19 12H5m0 0 6-6m-6 6 6 6"/>',
+  'arrow-right': '<path d="M5 12h14m0 0-6-6m6 6-6 6"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  moon: '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>',
+  menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
+  close: '<path d="M6 6l12 12M18 6 6 18"/>',
+  external: '<path d="M14 4h6v6m0-6-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>',
+  trophy: '<path d="M8 21h8m-4-4v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4a3 3 0 0 0 3 4m10-4h3a3 3 0 0 1-3 4"/>',
+  file: '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',
+  pin: '<path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/>',
+  calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4m8-4v4"/>',
+  eye: '<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>',
+  check: '<path d="m5 12 5 5 9-10"/>',
+  setka: '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+};
+const fill: Record<string, string> = {
+  linkedin: '<path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.06c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.13V21h-4v-4.96c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V21h-4V9.75Z"/>',
+  telegram: '<path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.2-8.3c.4-.4-.1-.6-.6-.2L6.2 13 1.3 11.5c-1-.3-1.1-1 .2-1.5L20.6 2.7c.9-.3 1.6.2 1.3 1.6Z"/>',
+  vk: '<path d="M12.8 18c-6.1 0-9.6-4.2-9.7-11.2h3.1c.1 5.1 2.3 7.3 4.1 7.7V6.8h2.9v4.4c1.8-.2 3.6-2.2 4.3-4.4h2.9a8.5 8.5 0 0 1-3.9 5.6 8.8 8.8 0 0 1 4.6 5.6h-3.2c-.7-2.2-2.4-3.9-4.7-4.1V18h-.4Z"/>',
+};
+const isFill = name in fill;
+const body = isFill ? fill[name] : stroke[name];
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  width={size}
+  height={size}
+  class={cls}
+  aria-hidden="true"
+  fill={isFill ? 'currentColor' : 'none'}
+  stroke={isFill ? 'none' : 'currentColor'}
+  stroke-width="1.8"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  set:html={body}
+/>

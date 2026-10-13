@@ -1,0 +1,66 @@
+---
+import Icon from './Icon.astro';
+import { ui, sectionIds, primaryNav, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const u = ui[lang];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const otherLang: Lang = lang === 'ru' ? 'en' : 'ru';
+const otherHref = otherLang === 'en' ? `${base}/en/` : `${base}/`;
+---
+
+<header data-header class="group/header fixed inset-x-0 top-0 z-50 border-b border-transparent transition-colors duration-300 [&.is-scrolled]:border-line [&.is-scrolled]:bg-bg/85 [&.is-scrolled]:backdrop-blur-md">
+  <div class="container-x flex h-16 items-center gap-3 sm:h-18">
+    <a href="#top" class="mr-auto flex items-center gap-2.5 font-semibold" aria-label={lang === 'ru' ? 'Сергей Семкин, наверх' : 'Sergey Semkin, back to top'}>
+      <span class="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-[0.8rem] font-bold text-brand-ink" style="font-family:var(--font-display)">{lang === 'ru' ? 'СС' : 'SS'}</span>
+      <span class="hidden text-sm sm:inline">{lang === 'ru' ? 'Сергей Семкин' : 'Sergey Semkin'}</span>
+    </a>
+
+    <nav aria-label={lang === 'ru' ? 'Основное меню' : 'Main menu'} class="hidden xl:block">
+      <ul class="flex items-center gap-1 text-[0.85rem] font-medium">
+        {
+          primaryNav.map((id) => (
+            <li>
+              <a href={`#${id}`} data-nav-link class="rounded-full px-3 py-2 text-muted transition-colors hover:text-ink aria-[current=true]:text-brand">
+                {u.nav[id]}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <a href={otherHref} data-lang-link={otherLang} hreflang={otherLang} lang={otherLang} class="btn-ghost btn-sm !px-3 text-xs tracking-wider" aria-label={u.langSwitch}>
+      <span aria-hidden="true"><span class:list={[lang === 'ru' ? 'text-brand' : 'text-muted']}>RU</span><span class="mx-1 text-line">/</span><span class:list={[lang === 'en' ? 'text-brand' : 'text-muted']}>EN</span></span>
+    </a>
+    <button type="button" data-theme-toggle class="btn-ghost btn-sm !w-9 !px-0" aria-label={u.theme} aria-pressed="false">
+      <Icon name="moon" size={18} class="dark:hidden" />
+      <Icon name="sun" size={18} class="hidden dark:block" />
+    </button>
+    <a href="#contacts" class="btn-primary btn-sm hidden sm:inline-flex" data-goal="cta_contact">{u.contact}</a>
+    <button type="button" data-menu-toggle class="btn-ghost btn-sm !w-9 !px-0" aria-expanded="false" aria-controls="site-menu" aria-label={u.menu}>
+      <Icon name="menu" size={18} />
+    </button>
+  </div>
+
+  <div id="site-menu" data-menu-panel hidden class="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-y border-line bg-bg shadow-xl">
+    <nav aria-label={lang === 'ru' ? 'Все разделы' : 'All sections'} class="container-x py-6">
+      <ul class="grid gap-1 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          sectionIds.map((id, i) => (
+            <li>
+              <a href={`#${id}`} data-nav-link class="flex items-baseline gap-3 rounded-xl px-3 py-3 transition-colors hover:bg-surface-2 aria-[current=true]:text-brand">
+                <span class="w-6 text-xs text-muted tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+                <span class="font-semibold">{u.nav[id]}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a href="#contacts" class="btn-primary mt-4 w-full sm:hidden">{u.contact}</a>
+    </nav>
+  </div>
+</header>

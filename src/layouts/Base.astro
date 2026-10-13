@@ -1,0 +1,140 @@
+---
+import '../styles/global.css';
+import { getImage as getOptimized } from 'astro:assets';
+import { site } from '../lib/site';
+import { t, type Lang } from '../lib/i18n';
+import { getImage } from '../lib/images';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const title = t(site.seo.title, lang);
+const description = t(site.subtitle, lang);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const ruPath = `${base}/`;
+const enPath = `${base}/en/`;
+const siteUrl = Astro.site ?? new URL('https://semkin.example');
+const canonical = new URL(lang === 'ru' ? ruPath : enPath, siteUrl).href;
+const ruUrl = new URL(ruPath, siteUrl).href;
+const enUrl = new URL(enPath, siteUrl).href;
+
+const ogImage = await getOptimized({ src: getImage('og-cover.jpg')!, width: 1200, height: 630, format: 'jpg', quality: 85 });
+const ogUrl = new URL(ogImage.src, siteUrl).href;
+
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: t(site.name, lang),
+  jobTitle: lang === 'ru' ? 'Директор по маркетингу' : 'Chief Marketing Officer',
+  description,
+  url: canonical,
+  image: ogUrl,
+  email: `mailto:${site.contacts.email}`,
+  address: { '@type': 'PostalAddress', addressLocality: lang === 'ru' ? 'Москва' : 'Moscow', addressCountry: 'RU' },
+  sameAs: [site.contacts.linkedin, site.contacts.telegramUrl, site.contacts.setka],
+  alumniOf: { '@type': 'CollegeOrUniversity', name: lang === 'ru' ? 'НИУ ВШЭ' : 'HSE University' },
+  knowsLanguage: ['ru', 'en', 'it', 'de'],
+};
+
+const ymId = import.meta.env.PUBLIC_YM_ID;
+const gaId = import.meta.env.PUBLIC_GA_ID;
+---
+
+<!doctype html>
+<html lang={lang} class="no-js" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={t(site.name, lang)} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="ru" href={ruUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={ruUrl} />
+    <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
+    <link rel="sitemap" href={`${base}/sitemap-index.xml`} />
+    <meta name="theme-color" content="#1e3a8a" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content={lang === 'ru' ? 'ru_RU' : 'en_US'} />
+    <meta property="og:locale:alternate" content={lang === 'ru' ? 'en_US' : 'ru_RU'} />
+    <meta property="profile:first_name" content={lang === 'ru' ? 'Сергей' : 'Sergey'} />
+    <meta property="profile:last_name" content={lang === 'ru' ? 'Семкин' : 'Semkin'} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogUrl} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
+
+    <!-- Тема и язык: применяем до отрисовки, чтобы не было мигания -->
+    <script is:inline define:vars={{ lang, ruPath, enPath }}>
+      document.documentElement.classList.remove('no-js');
+      try {
+        var saved = localStorage.getItem('theme');
+        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        var savedLang = localStorage.getItem('lang');
+        if (savedLang && savedLang !== lang) {
+          location.replace((savedLang === 'en' ? enPath : ruPath) + location.hash);
+        }
+      } catch (e) {}
+    </script>
+
+    {
+      ymId && (
+        <script is:inline define:vars={{ ymId }}>
+          (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+          (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+          ym(Number(ymId), "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: false });
+        </script>
+      )
+    }
+    {gaId && <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />}
+    {
+      gaId && (
+        <script is:inline define:vars={{ gaId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', gaId);
+        </script>
+      )
+    }
+  </head>
+  <body class="min-h-screen overflow-x-hidden">
+    <a href="#main" class="sr-only z-[100] rounded-lg bg-brand px-4 py-2 text-brand-ink focus:not-sr-only focus:fixed focus:top-3 focus:left-3">
+      {lang === 'ru' ? 'Перейти к содержимому' : 'Skip to content'}
+    </a>
+    <slot />
+
+    <script>
+      import { initSite } from '../scripts/site';
+      initSite();
+    </script>
+    <script is:inline define:vars={{ ymId: ymId ?? '', gaId: gaId ?? '' }}>
+      // События аналитики: любой элемент с data-goal="имя" отправляет цель при клике
+      document.addEventListener('click', function (e) {
+        var el = e.target.closest && e.target.closest('[data-goal]');
+        if (!el) return;
+        var goal = el.getAttribute('data-goal');
+        try {
+          if (ymId && window.ym) window.ym(Number(ymId), 'reachGoal', goal);
+          if (gaId && window.gtag) window.gtag('event', goal, { link_url: el.href || '' });
+        } catch (err) {}
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHeader from './SectionHeader.astro';
+import Carousel from './Carousel.astro';
+import Logo from './Logo.astro';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const u = ui[lang];
+const brands = await getCollection('brands');
+---
+
+<section id="brands" class="section overflow-hidden bg-surface-2/60" aria-labelledby="brands-title">
+  <div class="container-x">
+    <SectionHeader eyebrow="09" title={u.brandsTitle} id="brands-title" />
+    <Carousel lang={lang} label={u.brandsTitle} perView={4}>
+      {
+        brands.map(({ data }) => (
+          <div class="swiper-slide">
+            <article class="card logo-hover flex h-full flex-col p-5">
+              <Logo src={data.logo} alt={data.name} height={80} class="w-full border border-line" />
+              <p class="mt-5 text-xs font-bold tracking-wider text-muted uppercase">{data.category[lang]}</p>
+              <h3 class="mt-1 text-lg font-semibold">{data.name}</h3>
+              <p class="mt-2 text-sm text-muted">{data.done[lang]}</p>
+              <p class="mt-auto pt-5 text-xl leading-tight font-semibold text-brand" style="font-family:var(--font-display)">{data.metric[lang]}</p>
+            </article>
+          </div>
+        ))
+      }
+    </Carousel>
+  </div>
+</section>

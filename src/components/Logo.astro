@@ -1,0 +1,36 @@
+---
+// Логотип в белой «плашке» одинаковой высоты. Без картинки — аккуратная текстовая заглушка.
+import { Image } from 'astro:assets';
+import { getImage } from '../lib/images';
+
+interface Props {
+  src: string;
+  alt: string;
+  height?: number; // высота плашки, px
+  class?: string;
+  mono?: boolean;
+  eager?: boolean;
+}
+const { src, alt, height = 72, class: cls = '', mono = true, eager = false } = Astro.props;
+const image = getImage(src);
+const imgH = Math.round(height * 0.55);
+---
+
+<div class:list={['logo-chip shrink-0', cls]} style={`height:${height}px`}>
+  {
+    image ? (
+      <Image
+        src={image}
+        alt={alt}
+        height={imgH * 2}
+        class:list={['h-auto max-h-[58%] w-auto max-w-[82%] object-contain', mono && 'logo-mono']}
+        loading={eager ? "eager" : "lazy"}
+        decoding="async"
+      />
+    ) : (
+      <span class:list={['text-center text-base font-extrabold tracking-tight text-slate-700', mono && 'logo-mono']} style="font-family:var(--font-display)">
+        {alt}
+      </span>
+    )
+  }
+</div>

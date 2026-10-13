@@ -1,0 +1,81 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import { site } from '../lib/site';
+import { getImage, withBase } from '../lib/images';
+import { t, ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const u = ui[lang];
+const photo = getImage(site.photo)!;
+const resume = withBase(site.resume);
+---
+
+<section id="top" class="relative overflow-hidden pt-28 pb-16 sm:pt-32 lg:pt-36 lg:pb-24">
+  <div aria-hidden="true" class="pointer-events-none absolute -top-40 right-[-20%] h-[38rem] w-[38rem] rounded-full bg-brand/10 blur-3xl"></div>
+  <div class="container-x relative grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+    <div class="order-2 lg:order-1">
+      <p class="eyebrow">{t(site.location, lang)} · B2B · E-com · Export</p>
+      <h1 class="mt-4 text-[2.6rem] leading-[1.05] font-semibold sm:text-6xl lg:text-7xl">{t(site.name, lang)}</h1>
+      <p class="mt-5 text-lg font-semibold text-brand sm:text-xl">{t(site.position, lang)}</p>
+      <p class="mt-4 max-w-xl text-base text-muted sm:text-lg">{t(site.subtitle, lang)}</p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href={resume} download class="btn-primary" data-goal="download_resume">
+          <Icon name="download" size={18} />{u.downloadResume}
+        </a>
+        <a href={site.contacts.telegramUrl} target="_blank" rel="noopener noreferrer" class="btn-ghost" data-goal="click_telegram">
+          <Icon name="telegram" size={18} />{u.writeTelegram}
+        </a>
+        <a href={site.contacts.linkedin} target="_blank" rel="noopener noreferrer" class="btn-ghost !w-11 !px-0" aria-label="LinkedIn" data-goal="click_linkedin">
+          <Icon name="linkedin" size={18} />
+        </a>
+      </div>
+    </div>
+
+    <div class="order-1 mx-auto w-full max-w-[22rem] sm:max-w-sm lg:order-2 lg:max-w-none">
+      <div class="relative">
+        <div aria-hidden="true" class="absolute -inset-3 rounded-[2rem] border border-line"></div>
+        <Image
+          src={photo}
+          alt={lang === 'ru' ? 'Сергей Семкин, директор по маркетингу' : 'Sergey Semkin, Chief Marketing Officer'}
+          widths={[360, 540, 720, 960]}
+          sizes="(min-width: 1024px) 40vw, 22rem"
+          class="relative aspect-[4/5] w-full rounded-[1.6rem] object-cover object-[50%_30%] shadow-2xl shadow-black/15"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="container-x relative mt-14 lg:mt-20">
+    <dl class="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line xl:grid-cols-4">
+      {
+        site.stats.map((s) => (
+          <div class="flex flex-col bg-surface p-4 sm:p-7">
+            <dt class="order-2 mt-2 text-sm leading-snug text-muted">{t(s.label, lang)}</dt>
+            <dd class="order-1 text-[1.3rem] font-semibold whitespace-nowrap text-ink sm:text-4xl" style="font-family:var(--font-display)">
+              {s.prefix}<span data-count={s.count}>{s.count}</span><span class="text-brand">{t(s.suffix, lang)}</span>
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>
+
+<section id="about" class="pb-20 sm:pb-24">
+  <div class="container-x reveal grid gap-8 lg:grid-cols-[0.35fr_1fr] lg:gap-16">
+    <div>
+      <p class="eyebrow">{u.about}</p>
+    </div>
+    <div class="space-y-5 text-lg leading-relaxed sm:text-xl">
+      {site.about[lang].map((p, i) => <p class:list={[i === 0 ? 'text-ink' : 'text-muted']}>{p}</p>)}
+      <p class="text-base font-medium text-ink">{t(site.languages, lang)}</p>
+    </div>
+  </div>
+</section>

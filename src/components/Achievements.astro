@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHeader from './SectionHeader.astro';
+import { ui, formatNumber, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const u = ui[lang];
+const items = await getCollection('achievements');
+
+/** Делит заголовок по {n}, чтобы вставить анимированное число */
+const split = (title: string) => {
+  const i = title.indexOf('{n}');
+  return i === -1 ? [title, ''] : [title.slice(0, i), title.slice(i + 3)];
+};
+---
+
+<section id="achievements" class="section bg-surface-2/60" aria-labelledby="achievements-title">
+  <div class="container-x">
+    <SectionHeader eyebrow="01" title={u.achievementsTitle} lead={u.achievementsLead} id="achievements-title" />
+    <ol class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      {
+        items.map(({ data }, i) => {
+          const [before, after] = split(data.title[lang]);
+          return (
+            <li class="reveal card flex flex-col p-6 sm:p-7" style={`transition-delay:${(i % 3) * 60}ms`}>
+              <div class="flex items-center justify-between gap-3">
+                <span class="text-xs font-semibold tracking-wider text-muted uppercase">{data.company[lang]}</span>
+                <span class="text-xs text-muted tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+              </div>
+              <h3 class="mt-4 text-xl leading-snug font-semibold sm:text-2xl">
+                {before}{data.count !== undefined && <span class="text-brand" data-count={data.count} data-animate={String(data.animate)}>{data.animate ? formatNumber(data.count, lang) : data.count}</span>}{after}
+              </h3>
+              <p class="mt-5 text-xs font-bold tracking-wider text-muted uppercase">{u.whatDone}</p>
+              <ul class="mt-2 space-y-2 text-[0.95rem] text-muted">
+                {data.done[lang].map((d) => (
+                  <li class="relative pl-4 before:absolute before:top-[0.6em] before:left-0 before:h-1.5 before:w-1.5 before:rounded-full before:bg-brand/60">{d}</li>
+                ))}
+              </ul>
+              <div class="mt-auto pt-5">
+                <p class="rounded-xl bg-brand/8 p-4 text-[0.95rem] leading-snug font-medium text-ink dark:bg-brand/12">
+                  <span class="mb-1 block text-xs font-bold tracking-wider text-brand uppercase">{u.result}</span>
+                  {data.result[lang]}
+                </p>
+              </div>
+            </li>
+          );
+        })
+      }
+    </ol>
+  </div>
+</section>

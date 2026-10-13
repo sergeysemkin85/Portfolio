@@ -1,0 +1,79 @@
+[
+  {
+    "id": "grainford",
+    "name": { "ru": "Грейнфорд-Агро", "en": "Grainford-Agro" },
+    "logo": "logos/companies/grainford.webp",
+    "years": "2025–2026",
+    "role": { "ru": "Директор по маркетингу", "en": "Chief Marketing Officer" },
+    "realTitle": { "ru": "Директор по маркетингу", "en": "Marketing Director" },
+    "industry": { "ru": "Агро, ВЭД, логистика", "en": "Agribusiness, foreign trade, logistics" },
+    "highlight": { "ru": "Сайт в ответах ИИ по 30 запросам, ТОП-5 Яндекса", "en": "Website in AI answers for 30 queries, Yandex top 5" },
+    "linkedinUrl": ""
+  },
+  {
+    "id": "softline",
+    "name": { "ru": "Softline", "en": "Softline" },
+    "logo": "logos/companies/softline.png",
+    "years": "2024–2025",
+    "role": { "ru": "Интернет-маркетолог, B2B IT", "en": "Digital Marketing Lead, B2B IT" },
+    "realTitle": { "ru": "Интернет-маркетолог", "en": "Digital Marketer" },
+    "industry": { "ru": "IT, облачные сервисы", "en": "IT, cloud services" },
+    "highlight": { "ru": "CRM 0 → 2 000 B2B-контактов", "en": "CRM 0 → 2,000 B2B contacts" },
+    "linkedinUrl": ""
+  },
+  {
+    "id": "grainrus",
+    "name": { "ru": "ГК «Грейнрус»", "en": "Grainrus Group" },
+    "logo": "logos/companies/grainrus.webp",
+    "years": "2018–2024",
+    "role": { "ru": "Руководитель маркетинга и PR", "en": "Head of Marketing and PR" },
+    "realTitle": { "ru": "Менеджер по маркетингу и PR", "en": "Marketing and PR Manager" },
+    "industry": { "ru": "Агро, пищевое производство, экспорт", "en": "Agribusiness, food production, export" },
+    "highlight": { "ru": "Выручка e-com ×3, «Экспортёр года 2023»", "en": "E-com revenue ×3, “Exporter of the Year 2023”" },
+    "linkedinUrl": ""
+  },
+  {
+    "id": "inbody",
+    "name": { "ru": "InBody (ИНБОДИ-РУС)", "en": "InBody (InBody Rus)" },
+    "logo": "logos/companies/inbody.png",
+    "years": "2017–2018",
+    "role": { "ru": "Руководитель маркетинга и PR", "en": "Head of Marketing and PR" },
+    "realTitle": { "ru": "Менеджер по маркетингу и PR", "en": "Marketing and PR Manager" },
+    "industry": { "ru": "Медицинское и спортивное оборудование", "en": "Medical and fitness equipment" },
+    "highlight": { "ru": "B2B-заявки ×20", "en": "B2B leads ×20" },
+    "linkedinUrl": ""
+  },
+  {
+    "id": "amc",
+    "name": { "ru": "AMC (Швейцария)", "en": "AMC (Switzerland)" },
+    "logo": "logos/companies/amc.webp",
+    "years": "2014–2017",
+    "role": { "ru": "Руководитель маркетинга в РФ", "en": "Head of Marketing, Russia" },
+    "realTitle": { "ru": "Менеджер по маркетингу и PR", "en": "Marketing and PR Manager" },
+    "industry": { "ru": "Премиальная посуда, товары для дома", "en": "Premium cookware, home goods" },
+    "highlight": { "ru": "До 15 мероприятий в год на 300–400 гостей", "en": "Up to 15 events a year for 300–400 guests" },
+    "linkedinUrl": ""
+  },
+  {
+    "id": "nuskin",
+    "name": { "ru": "Nu Skin", "en": "Nu Skin" },
+    "logo": "logos/companies/nuskin.webp",
+    "years": "2012–2014",
+    "role": { "ru": "Менеджер по работе с партнёрами", "en": "Partner Relations Manager" },
+    "realTitle": { "ru": "Менеджер по работе с партнёрами", "en": "Partner Relations Manager" },
+    "industry": { "ru": "FMCG, beauty", "en": "FMCG, beauty" },
+    "highlight": { "ru": "Дистрибьюторы ×3, продажи ×2", "en": "Distributors ×3, sales ×2" },
+    "linkedinUrl": ""
+  },
+  {
+    "id": "ibs",
+    "name": { "ru": "IBS", "en": "IBS" },
+    "logo": "",
+    "years": "2007–2011",
+    "role": { "ru": "Руководитель группы Helpdesk", "en": "Helpdesk Team Lead" },
+    "realTitle": { "ru": "Старший оператор Helpdesk", "en": "Senior Helpdesk Operator" },
+    "industry": { "ru": "IT, системная интеграция", "en": "IT, systems integration" },
+    "highlight": { "ru": "Критические инциденты −50%", "en": "Critical incidents −50%" },
+    "linkedinUrl": ""
+  }
+]

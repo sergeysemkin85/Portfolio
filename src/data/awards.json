@@ -1,0 +1,21 @@
+[
+  {
+    "id": "exporter-2023",
+    "title": { "ru": "Победитель «Экспортёр года 2023»", "en": "Winner, “Exporter of the Year 2023”" },
+    "company": { "ru": "ГК «Грейнрус»", "en": "Grainrus Group" },
+    "year": 2023,
+    "image": "awards/exporter-2023.jpg"
+  },
+  {
+    "id": "agroinvestor-2022",
+    "title": { "ru": "Шорт-лист «Агроинвестор года 2022»", "en": "Shortlist, “Agroinvestor of the Year 2022”" },
+    "company": { "ru": "ГК «Грейнрус»", "en": "Grainrus Group" },
+    "year": 2022,
+    "image": "awards/agroinvestor.webp"
+  },
+  {
+    "id": "global-fitness-expert",
+    "title": { "ru": "Награда форума Global Fitness Expert", "en": "Global Fitness Expert forum award" },
+    "company": { "ru": "InBody", "en": "InBody" }
+  }
+]

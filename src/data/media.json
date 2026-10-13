@@ -1,0 +1,82 @@
+[
+  {
+    "id": "kommersant-hops",
+    "url": "https://www.kommersant.ru/doc/6299005",
+    "outlet": "Коммерсантъ",
+    "outletLogo": "logos/media/kommersant.webp",
+    "title": "Петербургская солодовня перешла во владение «Грейнрус»",
+    "description": "Подробнее на сайте",
+    "date": "2023-10-27",
+    "image": ""
+  },
+  {
+    "id": "forbes-hops",
+    "url": "https://www.forbes.ru/prodovolstvennaya-bezopasnost/494994-pivo-s-gorcinkoj-pocemu-rossia-pocti-ne-proizvodit-sobstvennyj-hmel",
+    "outlet": "Forbes",
+    "outletLogo": "",
+    "title": "Пиво с горчинкой: почему Россия почти не производит собственный хмель",
+    "description": "Российские пивовары почти на 97% зависят от иностранного хмеля. Из тех скромных объемов, что выращиваются в стране, 90% приходится на Чувашскую Республику. Пивовары и чиновники рассчитывают, что в ближайшие годы производство хмеля в России вырастет в",
+    "date": "2023-08-30",
+    "image": "media/forbes-hops.webp"
+  },
+  {
+    "id": "ria-exporter-award",
+    "url": "https://ria.ru/20230822/premiya-1891455202.html",
+    "outlet": "РИА Новости",
+    "outletLogo": "logos/media/ria.svg",
+    "title": "Премию «Экспортер года» вручили лучшим предприятиям в Центральной России",
+    "description": "Единая окружная конкурсная комиссия Всероссийской премии \"Экспортер года\" определила победителей в Центральном федеральном округе. По решению комиссии,... РИА Новости, 22.08.2023",
+    "date": "2023-08-22",
+    "image": "media/ria-exporter-award.webp"
+  },
+  {
+    "id": "agroinvestor-hops",
+    "url": "https://www.agroinvestor.ru/investments/news/41260-greynrus-investiroval-v-zakladku-khmelnika-1-mlrd-rubley/",
+    "outlet": "Агроинвестор",
+    "outletLogo": "logos/media/agroinvestor.webp",
+    "title": "«Грейнрус» инвестировал в закладку хмельника 1 млрд рублей",
+    "description": "",
+    "date": "",
+    "image": ""
+  },
+  {
+    "id": "rbc-kuban",
+    "url": "https://kuban.rbc.ru/krasnodar/freenews/64e75d5a9a794748ee91b52a",
+    "outlet": "РБК Кубань",
+    "outletLogo": "",
+    "title": "",
+    "description": "",
+    "date": "",
+    "image": ""
+  },
+  {
+    "id": "ria-kvas",
+    "url": "https://ria.ru/20221001/kvas-1820816345.html",
+    "outlet": "РИА Новости",
+    "outletLogo": "logos/media/ria.svg",
+    "title": "Как приготовить домашний квас — 30 рецептов: хлебный, овсяный, свекольный",
+    "description": "Квас — традиционный напиток с терпким вкусом и насыщенным ароматом. Он богат витаминами и полезными веществами, имеет низкую калорийность. Как приготовить этот... РИА Новости, 08.12.2025",
+    "date": "2022-10-01",
+    "image": "media/ria-kvas.webp"
+  },
+  {
+    "id": "rbc-companies-26",
+    "url": "https://companies.rbc.ru/news/F1pPzuf9jQ/26-let-gruppe-kompanij-grejnrus/",
+    "outlet": "РБК Компании",
+    "outletLogo": "",
+    "title": "26 лет группе компаний «Грейнрус»",
+    "description": "",
+    "date": "",
+    "image": ""
+  },
+  {
+    "id": "profibeer-awards",
+    "url": "https://profibeer.ru/beer/soyuz-rossijskix-pivovarov-vruchil-nagrady-ko-dnyu-pivovara/",
+    "outlet": "Profibeer",
+    "outletLogo": "logos/media/profibeer.png",
+    "title": "Союз российских пивоваров вручил награды ко Дню пивовара",
+    "description": "",
+    "date": "",
+    "image": ""
+  }
+]

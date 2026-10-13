@@ -1,0 +1,83 @@
+[
+  {
+    "id": "grainrus-25",
+    "title": { "ru": "Ключевой визуал к 25-летию ГК «Грейнрус»", "en": "Key visual for Grainrus Group’s 25th anniversary" },
+    "image": "creatives/grainrus-25.webp"
+  },
+  {
+    "id": "grainrus-calendar",
+    "title": { "ru": "Корпоративный календарь «Грейнрус»", "en": "Grainrus corporate calendar" },
+    "image": "creatives/grainrus-calendar.jpg"
+  },
+  {
+    "id": "beer-market-review",
+    "title": { "ru": "Еженедельный обзор рынка пива, солода и ячменя", "en": "Weekly beer, malt and barley market review" },
+    "image": "creatives/beer-market-review.jpg"
+  },
+  {
+    "id": "malt-ru-banner",
+    "title": { "ru": "Баннер интернет-магазина malt.ru", "en": "malt.ru online store banner" },
+    "image": "creatives/malt-ru-banner.png"
+  },
+  {
+    "id": "grainford-booklet",
+    "title": { "ru": "Буклет Грейнфорд-Агро", "en": "Grainford-Agro brochure" },
+    "image": "creatives/grainford-booklet.webp",
+    "file": "/files/grainford-booklet.pdf"
+  },
+  {
+    "id": "grainford-hops",
+    "title": { "ru": "Визуал для сайта Грейнфорд-Агро: хмель и пиво", "en": "Grainford-Agro website visual: hops and beer" },
+    "image": "creatives/grainford-hops.png"
+  },
+  {
+    "id": "grainford-sunflowers",
+    "title": { "ru": "Визуалы для сайта Грейнфорд-Агро", "en": "Visuals for the Grainford-Agro website" },
+    "image": "creatives/grainford-sunflowers.png"
+  },
+  {
+    "id": "grainford-elevator",
+    "title": { "ru": "Визуал для сайта Грейнфорд-Агро: элеватор", "en": "Grainford-Agro website visual: grain elevator" },
+    "image": "creatives/grainford-elevator.png"
+  },
+  {
+    "id": "inferit-ad-1",
+    "title": { "ru": "Объявления Инферит Облако в Яндекс Директ", "en": "Inferit Cloud ads in Yandex Direct" },
+    "image": "creatives/inferit-ad-1.png"
+  },
+  {
+    "id": "inferit-ad-3",
+    "title": { "ru": "Объявление Инферит Облако: выделенный сервер", "en": "Inferit Cloud ad: dedicated server" },
+    "image": "creatives/inferit-ad-3.png"
+  },
+  {
+    "id": "grainrus-product-1",
+    "title": { "ru": "Предметная съёмка продукции «Грейнрус»", "en": "Grainrus product photography" },
+    "image": "creatives/grainrus-product-1.webp"
+  },
+  {
+    "id": "grainrus-product-2",
+    "title": { "ru": "Предметная съёмка: солод «Грейнрус»", "en": "Product photography: Grainrus malt" },
+    "image": "creatives/grainrus-product-2.webp"
+  },
+  {
+    "id": "gift-sets",
+    "title": { "ru": "Предметная съёмка: подарочные наборы", "en": "Product photography: gift sets" },
+    "image": "creatives/gift-sets.jpg"
+  },
+  {
+    "id": "homebrew-kits",
+    "title": { "ru": "Предметная съёмка: наборы для домашнего пивоварения", "en": "Product photography: homebrewing kits" },
+    "image": "creatives/homebrew-kits.webp"
+  },
+  {
+    "id": "grainrus-stand",
+    "title": { "ru": "Выставочный стенд «Грейнрус»", "en": "Grainrus trade show booth" },
+    "image": "creatives/grainrus-stand.webp"
+  },
+  {
+    "id": "grainrus-merch",
+    "title": { "ru": "Мерч: футболки «Грейнрус»", "en": "Merch: Grainrus T-shirts" },
+    "image": "creatives/grainrus-merch.jpg"
+  }
+]

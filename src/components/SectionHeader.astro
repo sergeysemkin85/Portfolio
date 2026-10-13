@@ -1,0 +1,18 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  lead?: string;
+  id?: string;
+}
+const { eyebrow, title, lead, id } = Astro.props;
+---
+
+<div class="reveal flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+  <div>
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    <h2 class="h2" id={id}>{title}</h2>
+    {lead && <p class="lead">{lead}</p>}
+  </div>
+  <slot />
+</div>

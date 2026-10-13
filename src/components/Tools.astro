@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHeader from './SectionHeader.astro';
+import Logo from './Logo.astro';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const u = ui[lang];
+const tools = await getCollection('tools');
+const groups = (['ads', 'seo', 'crm', 'web', 'ai'] as const)
+  .map((g) => ({ id: g, items: tools.filter((t) => t.data.group === g) }))
+  .filter((g) => g.items.length);
+---
+
+<section id="tools" class="section" aria-labelledby="tools-title">
+  <div class="container-x">
+    <SectionHeader eyebrow="10" title={u.toolsTitle} lead={u.toolsLead} id="tools-title" />
+    <div class="mt-12 grid gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+      {
+        groups.map((g) => (
+          <div class="reveal">
+            <h3 class="text-sm font-bold tracking-wider text-muted uppercase" style="font-family:var(--font-sans)">{u.toolGroups[g.id]}</h3>
+            <ul class="mt-4 grid grid-cols-2 gap-3">
+              {g.items.map(({ data }) => (
+                <li class="logo-hover">
+                  <Logo src={data.logo} alt={data.name} height={68} class="w-full border border-line" />
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

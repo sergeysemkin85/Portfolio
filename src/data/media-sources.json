@@ -1,0 +1,55 @@
+[
+  {
+    "id": "kommersant-hops",
+    "url": "https://www.kommersant.ru/doc/6299005",
+    "outlet": "Коммерсантъ",
+    "outletLogo": "logos/media/kommersant.webp"
+  },
+  {
+    "id": "forbes-hops",
+    "url": "https://www.forbes.ru/prodovolstvennaya-bezopasnost/494994-pivo-s-gorcinkoj-pocemu-rossia-pocti-ne-proizvodit-sobstvennyj-hmel",
+    "outlet": "Forbes",
+    "outletLogo": ""
+  },
+  {
+    "id": "ria-exporter-award",
+    "url": "https://ria.ru/20230822/premiya-1891455202.html",
+    "outlet": "РИА Новости",
+    "outletLogo": "logos/media/ria.svg",
+    "title": "Премию «Экспортер года» вручили лучшим предприятиям в Центральной России"
+  },
+  {
+    "id": "agroinvestor-hops",
+    "url": "https://www.agroinvestor.ru/investments/news/41260-greynrus-investiroval-v-zakladku-khmelnika-1-mlrd-rubley/",
+    "outlet": "Агроинвестор",
+    "outletLogo": "logos/media/agroinvestor.webp",
+    "title": "«Грейнрус» инвестировал в закладку хмельника 1 млрд рублей"
+  },
+  {
+    "id": "rbc-kuban",
+    "url": "https://kuban.rbc.ru/krasnodar/freenews/64e75d5a9a794748ee91b52a",
+    "outlet": "РБК Кубань",
+    "outletLogo": ""
+  },
+  {
+    "id": "ria-kvas",
+    "url": "https://ria.ru/20221001/kvas-1820816345.html",
+    "outlet": "РИА Новости",
+    "outletLogo": "logos/media/ria.svg",
+    "date": "2022-10-01"
+  },
+  {
+    "id": "rbc-companies-26",
+    "url": "https://companies.rbc.ru/news/F1pPzuf9jQ/26-let-gruppe-kompanij-grejnrus/",
+    "outlet": "РБК Компании",
+    "outletLogo": "",
+    "title": "26 лет группе компаний «Грейнрус»"
+  },
+  {
+    "id": "profibeer-awards",
+    "url": "https://profibeer.ru/beer/soyuz-rossijskix-pivovarov-vruchil-nagrady-ko-dnyu-pivovara/",
+    "outlet": "Profibeer",
+    "outletLogo": "logos/media/profibeer.png",
+    "title": "Союз российских пивоваров вручил награды ко Дню пивовара"
+  }
+]

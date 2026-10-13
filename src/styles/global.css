@@ -1,0 +1,134 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/manrope';
+@import '@fontsource-variable/unbounded';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+@theme {
+  --font-sans: 'Manrope Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Unbounded Variable', 'Manrope Variable', system-ui, sans-serif;
+
+  --color-accent: #1e3a8a;
+  --color-accent-strong: #172c6b;
+  --color-accent-soft: #e8edf9;
+  --color-gold: #b08d57;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+}
+
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --surface-2: #f2f0ea;
+  --ink: #0f172a;
+  --muted: #4b5563;
+  --line: #e5e2da;
+  --brand: #1e3a8a;
+  --brand-ink: #ffffff;
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --bg: #0b1020;
+  --surface: #121a2e;
+  --surface-2: #19223a;
+  --ink: #eef1f8;
+  --muted: #a7b0c4;
+  --line: #26304a;
+  --brand: #8fa8ff;
+  --brand-ink: #0b1020;
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  :focus-visible {
+    outline: 3px solid var(--brand);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  ::selection { background: var(--brand); color: var(--brand-ink); }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+}
+
+@utility container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10; }
+@utility section { @apply py-20 sm:py-24 lg:py-28; }
+@utility eyebrow { @apply text-xs font-bold tracking-[0.18em] text-brand uppercase; }
+@utility h2 { @apply mt-3 text-3xl leading-tight font-semibold sm:text-4xl lg:text-[2.75rem]; }
+@utility lead { @apply mt-4 max-w-2xl text-base text-muted sm:text-lg; }
+
+@utility btn { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200 sm:text-[0.95rem]; }
+@utility btn-primary { @apply btn bg-brand text-brand-ink hover:opacity-90; }
+@utility btn-ghost { @apply btn border border-line bg-surface text-ink hover:border-brand hover:text-brand; }
+@utility btn-sm { @apply min-h-9 px-4 py-1.5 text-sm; }
+
+@utility card { @apply rounded-2xl border border-line bg-surface; }
+
+/* Логотипы: монохромные по умолчанию, цветные при наведении */
+@utility logo-chip { @apply flex items-center justify-center rounded-xl bg-white px-5; }
+@utility placeholder-badge { @apply inline-flex items-center rounded-full border border-dashed border-gold px-2.5 py-0.5 text-[0.7rem] font-semibold tracking-wide text-gold uppercase; }
+
+.logo-mono { filter: grayscale(1); opacity: 0.7; transition: filter 0.3s ease, opacity 0.3s ease; }
+.logo-hover:hover .logo-mono, .logo-hover:focus-within .logo-mono, .logo-mono:hover { filter: none; opacity: 1; }
+
+/* Появление секций при скролле */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+.no-js .reveal { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Бегущая лента логотипов (без JS) */
+.marquee { --gap: 1.25rem; display: flex; overflow: hidden; gap: var(--gap); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee-track { display: flex; flex-shrink: 0; gap: var(--gap); min-width: 100%; justify-content: space-around; animation: marquee 40s linear infinite; }
+.marquee:hover .marquee-track, .marquee:focus-within .marquee-track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(calc(-100% - var(--gap))); } }
+@media (prefers-reduced-motion: reduce) {
+  .marquee { flex-wrap: wrap; justify-content: center; mask-image: none; }
+  .marquee-track { animation: none; flex-wrap: wrap; justify-content: center; }
+  .marquee-track[aria-hidden='true'] { display: none; }
+}
+
+/* Swiper: цвета под тему */
+.swiper, [data-carousel] { --swiper-theme-color: var(--brand); --swiper-pagination-bullet-inactive-color: var(--muted); --swiper-pagination-bullet-inactive-opacity: 0.35; }
+.swiper-slide { height: auto; }
+/* Слайды выглядывают справа, но не слева от контейнера */
+.swiper.peek { overflow: visible; clip-path: inset(-40px -100vw -40px 0); }
+.carousel-nav { display: flex; height: 2.75rem; width: 2.75rem; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); transition: color 0.2s, border-color 0.2s; }
+.carousel-nav:hover { border-color: var(--brand); color: var(--brand); }
+.carousel-nav.swiper-button-disabled { opacity: 0.35; pointer-events: none; }
+.swiper-pagination.carousel-dots { position: static; margin-top: 1.75rem; }
+.carousel-dots .swiper-pagination-bullet { width: 8px; height: 8px; transition: width 0.25s ease; }
+.carousel-dots .swiper-pagination-bullet-active { width: 22px; border-radius: 99px; }
+
+dialog::backdrop { background: rgb(5 10 25 / 0.72); backdrop-filter: blur(3px); }
+dialog[open] { animation: dialog-in 0.2s ease; }
+@keyframes dialog-in { from { opacity: 0; transform: translateY(8px) scale(0.98); } }

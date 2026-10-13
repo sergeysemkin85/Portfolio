@@ -1,0 +1,58 @@
+[
+  {
+    "id": "malt-ru",
+    "name": "malt.ru",
+    "logo": "",
+    "category": { "ru": "E-commerce, товары для пивоварения", "en": "E-commerce, brewing supplies" },
+    "done": { "ru": "Перезапуск магазина, SEO, автоматизация Mindbox", "en": "Store relaunch, SEO, Mindbox automation" },
+    "metric": { "ru": "Выручка ×3", "en": "Revenue ×3" }
+  },
+  {
+    "id": "grainrus",
+    "name": "Grainrus",
+    "logo": "logos/companies/grainrus.webp",
+    "category": { "ru": "B2B, агро и экспорт", "en": "B2B, agribusiness and export" },
+    "done": { "ru": "Запуск двуязычного сайта, PR, выставки", "en": "Bilingual website launch, PR, trade shows" },
+    "metric": { "ru": "«Экспортёр года 2023»", "en": "“Exporter of the Year 2023”" }
+  },
+  {
+    "id": "inferit",
+    "name": "Inferit Cloud",
+    "logo": "logos/brands/inferit.webp",
+    "category": { "ru": "B2B IT, облака", "en": "B2B IT, cloud" },
+    "done": { "ru": "Digital-стратегия и лидген с нуля", "en": "Digital strategy and lead generation from scratch" },
+    "metric": { "ru": "ТОП-3 по 200+ запросам", "en": "Top 3 for 200+ queries" }
+  },
+  {
+    "id": "inbody",
+    "name": "InBody",
+    "logo": "logos/companies/inbody.png",
+    "category": { "ru": "Медоборудование", "en": "Medical equipment" },
+    "done": { "ru": "Лидогенерация, InBody Academy", "en": "Lead generation, InBody Academy" },
+    "metric": { "ru": "Заявки ×20", "en": "Leads ×20" }
+  },
+  {
+    "id": "amc",
+    "name": "AMC",
+    "logo": "logos/companies/amc.webp",
+    "category": { "ru": "Премиальная посуда", "en": "Premium cookware" },
+    "done": { "ru": "Маркетинг и ивенты в РФ", "en": "Marketing and events in Russia" },
+    "metric": { "ru": "До 15 мероприятий в год", "en": "Up to 15 events a year" }
+  },
+  {
+    "id": "nuskin",
+    "name": "Nu Skin",
+    "logo": "logos/companies/nuskin.webp",
+    "category": { "ru": "Beauty, FMCG", "en": "Beauty, FMCG" },
+    "done": { "ru": "Развитие дистрибьюторской сети", "en": "Distributor network growth" },
+    "metric": { "ru": "Дистрибьюторы ×3", "en": "Distributors ×3" }
+  },
+  {
+    "id": "grainford",
+    "name": "Грейнфорд-Агро",
+    "logo": "logos/companies/grainford.webp",
+    "category": { "ru": "B2B, сырьё для пивоварения", "en": "B2B, brewing raw materials" },
+    "done": { "ru": "Сайт, CRM, Директ, BI", "en": "Website, CRM, Yandex Direct, BI" },
+    "metric": { "ru": "100+ запросов КП за месяц", "en": "100+ quote requests a month" }
+  }
+]

@@ -1,0 +1,65 @@
+---
+import Icon from './Icon.astro';
+import { site } from '../lib/site';
+import { withBase } from '../lib/images';
+import { t, ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const u = ui[lang];
+const c = site.contacts;
+const links = [
+  { icon: 'mail', label: 'Email', value: c.email, href: `mailto:${c.email}`, goal: 'click_email', external: false },
+  { icon: 'telegram', label: 'Telegram', value: `@${c.telegram}`, href: c.telegramUrl, goal: 'click_telegram', external: true },
+  { icon: 'linkedin', label: 'LinkedIn', value: 'sergey-semkin', href: c.linkedin, goal: 'click_linkedin', external: true },
+  { icon: 'setka', label: lang === 'ru' ? '«Сетка»' : 'Setka', value: 'set.ki/FQQvVcp', href: c.setka, goal: 'click_setka', external: true },
+] as const;
+---
+
+<section id="contacts" class="section relative overflow-hidden bg-accent text-white" aria-labelledby="contacts-title">
+  <div aria-hidden="true" class="pointer-events-none absolute -right-40 -bottom-40 h-[32rem] w-[32rem] rounded-full bg-white/10 blur-3xl"></div>
+  <div class="container-x relative grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+    <div class="reveal">
+      <p class="text-xs font-bold tracking-[0.18em] text-white/70 uppercase">12 · {u.nav.contacts}</p>
+      <h2 id="contacts-title" class="mt-4 text-4xl leading-tight font-semibold sm:text-5xl lg:text-6xl">{u.contactsTitle}</h2>
+      <p class="mt-5 max-w-xl text-lg text-white/80">{u.contactsLead}</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href={withBase(site.resume)} download class="btn bg-white text-accent hover:bg-white/90" data-goal="download_resume">
+          <Icon name="download" size={18} />{u.downloadResume}
+        </a>
+        <a href={c.telegramUrl} target="_blank" rel="noopener noreferrer" class="btn border border-white/40 text-white hover:bg-white/10" data-goal="click_telegram">
+          <Icon name="telegram" size={18} />{u.writeTelegram}
+        </a>
+      </div>
+    </div>
+    <ul class="reveal grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+      {
+        links.map((l) => (
+          <li>
+            <a
+              href={l.href}
+              {...(l.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              class="group flex items-center gap-4 rounded-2xl border border-white/20 bg-white/5 p-4 transition-colors hover:bg-white/15"
+              data-goal={l.goal}
+            >
+              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-accent">
+                <Icon name={l.icon} size={20} />
+              </span>
+              <span class="min-w-0">
+                <span class="block text-xs tracking-wider text-white/65 uppercase">{l.label}</span>
+                <span class="block truncate font-semibold">{l.value}</span>
+              </span>
+              <Icon name="arrow-right" size={18} class="ml-auto shrink-0 opacity-60 transition-transform group-hover:translate-x-1" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <footer class="container-x relative mt-20 flex flex-col gap-2 border-t border-white/20 pt-6 text-sm text-white/70 sm:flex-row sm:justify-between">
+    <p>© {new Date().getFullYear()} {t(site.name, lang)}</p>
+    <p>{t(site.position, lang)}</p>
+  </footer>
+</section>

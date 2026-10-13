@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from './Header.astro';
+import Hero from './Hero.astro';
+import Achievements from './Achievements.astro';
+import Certificates from './Certificates.astro';
+import Companies from './Companies.astro';
+import Partners from './Partners.astro';
+import EventsCarousel from './EventsCarousel.astro';
+import LinkedinCompanies from './LinkedinCompanies.astro';
+import Media from './Media.astro';
+import Brands from './Brands.astro';
+import Tools from './Tools.astro';
+import Creatives from './Creatives.astro';
+import Contacts from './Contacts.astro';
+import Viewer from './Viewer.astro';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const u = ui[lang];
+---
+
+<Base lang={lang}>
+  <Header lang={lang} />
+  <main id="main">
+    <Hero lang={lang} />
+    <Achievements lang={lang} />
+    <Certificates lang={lang} />
+    <Companies lang={lang} />
+    <Partners lang={lang} />
+    <EventsCarousel lang={lang} collection="eventsInternational" id="eventsInternational" eyebrow="05" title={u.eventsIntTitle} lead={u.eventsIntLead} />
+    <EventsCarousel lang={lang} collection="eventsRussia" id="eventsRussia" eyebrow="06" title={u.eventsRuTitle} lead={u.eventsRuLead} />
+    <LinkedinCompanies lang={lang} />
+    <Media lang={lang} />
+    <Brands lang={lang} />
+    <Tools lang={lang} />
+    <Creatives lang={lang} />
+    <Contacts lang={lang} />
+  </main>
+  <Viewer lang={lang} />
+</Base>

@@ -1,0 +1,28 @@
+---
+// Обёртка Swiper: свайп, стрелки, точки, клавиатура, autoplay с паузой при наведении.
+import Icon from './Icon.astro';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+  label: string;
+  perView?: number;
+}
+const { lang, label, perView = 3 } = Astro.props;
+const u = ui[lang];
+---
+
+<div class="reveal mt-10" data-carousel data-per-view={perView} data-prev-label={u.prev} data-next-label={u.next}>
+  <div class="swiper peek" role="region" aria-roledescription="carousel" aria-label={label}>
+    <div class="swiper-wrapper">
+      <slot />
+    </div>
+  </div>
+  <div class="mt-6 flex items-center gap-3">
+    <div class="carousel-dots swiper-pagination !mt-0 !w-auto text-left"></div>
+    <div class="ml-auto flex gap-2">
+      <button type="button" class="carousel-nav" data-prev aria-label={u.prev}><Icon name="arrow-left" size={18} /></button>
+      <button type="button" class="carousel-nav" data-next aria-label={u.next}><Icon name="arrow-right" size={18} /></button>
+    </div>
+  </div>
+</div>

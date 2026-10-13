@@ -1,0 +1,56 @@
+---
+import { Image, getImage as optimize } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import SectionHeader from './SectionHeader.astro';
+import Icon from './Icon.astro';
+import { getImage, withBase } from '../lib/images';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const u = ui[lang];
+const items = await Promise.all(
+  (await getCollection('creatives')).map(async ({ id, data }) => {
+    const img = getImage(data.image)!;
+    // Крупная версия для просмотра в модальном окне
+    const large = await optimize({ src: img, width: Math.min(img.width, 1600), format: 'webp', quality: 82 });
+    return { id, ...data, img, large: large.src };
+  }),
+);
+---
+
+<section id="creatives" class="section bg-surface-2/60" aria-labelledby="creatives-title">
+  <div class="container-x">
+    <SectionHeader eyebrow="11" title={u.creativesTitle} lead={u.creativesLead} id="creatives-title" />
+    <ul class="mt-12 columns-2 gap-3 sm:gap-4 md:columns-3 xl:columns-4">
+      {
+        items.map((c) => {
+          const title = c.title[lang];
+          const isPdf = Boolean(c.file);
+          return (
+            <li class="reveal mb-3 break-inside-avoid sm:mb-4">
+              <button
+                type="button"
+                class="group relative block w-full overflow-hidden rounded-xl border border-line bg-surface text-left"
+                data-open-viewer
+                data-kind={isPdf ? 'pdf' : 'image'}
+                data-src={isPdf ? withBase(c.file!) : c.large}
+                data-title={title}
+                data-download={isPdf ? 'true' : 'false'}
+                data-download-goal="download_file"
+              >
+                <Image src={c.img} alt={title} widths={[300, 480, 640]} sizes="(min-width:1280px) 22vw, (min-width:768px) 30vw, 46vw" class="w-full transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" />
+                <span class="absolute inset-x-0 bottom-0 flex items-end gap-2 bg-gradient-to-t from-black/80 to-transparent p-3 pt-10 text-xs leading-snug font-medium text-white sm:text-sm">
+                  {isPdf && <Icon name="file" size={16} class="shrink-0" />}
+                  {title}
+                </span>
+              </button>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHeader from './SectionHeader.astro';
+import Logo from './Logo.astro';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const u = ui[lang];
+const companies = await getCollection('companies');
+---
+
+<section id="companies" class="section bg-surface-2/60" aria-labelledby="companies-title">
+  <div class="container-x">
+    <SectionHeader eyebrow="03" title={u.companiesTitle} lead={u.companiesLead} id="companies-title" />
+
+    <ul class="reveal mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-7">
+      {
+        companies.map(({ id, data }) => (
+          <li class="relative">
+            <button
+              type="button"
+              data-tip
+              data-open="false"
+              aria-describedby={`tip-${id}`}
+              class="logo-hover group/tip block w-full rounded-xl border border-line bg-white transition-shadow hover:shadow-lg focus-visible:shadow-lg"
+            >
+              <Logo src={data.logo} alt={data.name[lang]} height={84} class="w-full" />
+              <span
+                role="tooltip"
+                id={`tip-${id}`}
+                class="pointer-events-none absolute bottom-[calc(100%+10px)] left-1/2 z-20 w-48 -translate-x-1/2 sm:w-56 rounded-xl bg-ink px-3.5 py-2.5 text-left text-xs leading-snug text-bg opacity-0 shadow-xl transition-opacity duration-200 group-hover/tip:opacity-100 group-focus-visible/tip:opacity-100 group-data-[open=true]/tip:opacity-100"
+              >
+                <span class="block text-sm font-semibold">{data.name[lang]}</span>
+                <span class="mt-0.5 block">{data.role[lang]}</span>
+                <span class="mt-0.5 block opacity-70">{data.years}</span>
+              </span>
+            </button>
+          </li>
+        ))
+      }
+    </ul>
+
+    <ol class="reveal relative mt-14 grid gap-6 border-l border-line pl-6 sm:grid-cols-2 sm:border-l-0 sm:pl-0 lg:grid-cols-7 lg:gap-4">
+      <span aria-hidden="true" class="absolute top-[7px] right-0 left-0 hidden h-px bg-line lg:block"></span>
+      {
+        companies.map(({ data }) => (
+          <li class="relative lg:pt-7">
+            <span aria-hidden="true" class="absolute top-1.5 -left-[29px] h-2.5 w-2.5 rounded-full border-2 border-bg bg-brand ring-1 ring-brand sm:hidden lg:top-[2px] lg:left-0 lg:block" />
+            <p class="text-sm font-bold text-brand tabular-nums">{data.years}</p>
+            <p class="mt-1 font-semibold">{data.name[lang]}</p>
+            <p class="mt-1 text-xs leading-snug text-muted">{data.realTitle[lang]}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

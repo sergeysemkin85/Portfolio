@@ -1,0 +1,63 @@
+[
+  {
+    "id": "pivo-sochi",
+    "title": { "ru": "Выставка «Пиво.Сочи»", "en": "Pivo.Sochi trade show" },
+    "location": { "ru": "Сочи, Россия", "en": "Sochi, Russia" },
+    "date": "",
+    "role": { "ru": "Организация участия компании", "en": "Company participation lead" },
+    "description": {
+      "ru": "Стенд Грейнфорд-Агро на отраслевой выставке пивоваренного рынка: сырьё для пивоварения, встречи с пивоварнями.",
+      "en": "Grainford-Agro booth at the brewing industry trade show: brewing raw materials and meetings with breweries."
+    },
+    "image": "",
+    "url": "",
+    "embedUrl": "",
+    "source": "telegram"
+  },
+  {
+    "id": "bevitec",
+    "title": { "ru": "Выставка Bevitec", "en": "Bevitec trade show" },
+    "location": { "ru": "Москва, Россия", "en": "Moscow, Russia" },
+    "date": "",
+    "role": { "ru": "Организация участия компании", "en": "Company participation lead" },
+    "description": {
+      "ru": "Участие Грейнфорд-Агро в выставке технологий для производства напитков.",
+      "en": "Grainford-Agro at the beverage production technology trade show."
+    },
+    "image": "",
+    "url": "",
+    "embedUrl": "",
+    "source": "telegram"
+  },
+  {
+    "id": "exporter-2023",
+    "title": { "ru": "Премия «Экспортёр года 2023»", "en": "Exporter of the Year 2023 award" },
+    "location": { "ru": "Россия", "en": "Russia" },
+    "date": "2023",
+    "role": { "ru": "Подготовка заявки и представление компании", "en": "Award application and company representation" },
+    "description": {
+      "ru": "Всероссийская премия в области международной кооперации и экспорта: ГК «Грейнрус» победила в номинации.",
+      "en": "National award for international cooperation and export: Grainrus Group won its category."
+    },
+    "image": "events/exporter-2023.jpg",
+    "url": "",
+    "embedUrl": "",
+    "source": "site"
+  },
+  {
+    "id": "grainrus-forum",
+    "title": { "ru": "Форумы и выставки ГК «Грейнрус»", "en": "Grainrus Group forums and trade shows" },
+    "location": { "ru": "Россия", "en": "Russia" },
+    "date": "",
+    "role": { "ru": "Организация участия компании", "en": "Company participation lead" },
+    "description": {
+      "ru": "До 20 мероприятий в год: форумы, выставки и деловые встречи.",
+      "en": "Up to 20 events a year: forums, trade shows and business meetings."
+    },
+    "image": "",
+    "url": "",
+    "embedUrl": "",
+    "source": "vk",
+    "placeholder": true
+  }
+]

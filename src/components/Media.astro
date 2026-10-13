@@ -1,0 +1,63 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import SectionHeader from './SectionHeader.astro';
+import Carousel from './Carousel.astro';
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import { site } from '../lib/site';
+import { getImage } from '../lib/images';
+import { t, ui, formatDate, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const u = ui[lang];
+const media = await getCollection('media');
+---
+
+<section id="media" class="section overflow-hidden" aria-labelledby="media-title">
+  <div class="container-x">
+    <SectionHeader eyebrow="08" title={u.mediaTitle} id="media-title" />
+    <p class="reveal mt-8 rounded-2xl border border-line bg-surface p-5 text-lg font-semibold sm:p-6 sm:text-2xl" style="font-family:var(--font-display)">
+      <span class="text-brand">{t(site.mediaStat, lang)}</span>
+    </p>
+    <Carousel lang={lang} label={u.mediaTitle}>
+      {
+        media.map(({ data }) => {
+          const cover = getImage(data.image);
+          return (
+            <div class="swiper-slide">
+              <article class="card logo-hover flex h-full flex-col overflow-hidden">
+                <div class="relative aspect-[16/9] overflow-hidden bg-surface-2">
+                  {cover ? (
+                    <Image src={cover} alt="" widths={[400, 640, 800]} sizes="(min-width:1024px) 30vw, (min-width:640px) 45vw, 90vw" class="h-full w-full object-cover" loading="lazy" />
+                  ) : (
+                    <div class="flex h-full items-center justify-center bg-gradient-to-br from-brand/20 to-surface-2 p-6">
+                      <Logo src={data.outletLogo} alt={data.outlet} height={72} mono={false} />
+                    </div>
+                  )}
+                </div>
+                <div class="flex flex-1 flex-col p-5 sm:p-6">
+                  <div class="flex items-center justify-between gap-3">
+                    <Logo src={data.outletLogo} alt={data.outlet} height={40} class="!px-3 border border-line" />
+                    {data.date && <time datetime={data.date} class="text-xs text-muted">{formatDate(data.date, lang)}</time>}
+                  </div>
+                  <h3 class="mt-4 text-lg leading-snug font-semibold" lang="ru">{data.title || data.outlet}</h3>
+                  {data.description && <p class="mt-2 line-clamp-2 text-sm text-muted" lang="ru">{data.description}</p>}
+                  <div class="mt-auto pt-5">
+                    <a href={data.url} target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm" data-goal="read_article">
+                      {u.readArticle}
+                      <Icon name="external" size={15} />
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          );
+        })
+      }
+    </Carousel>
+  </div>
+</section>

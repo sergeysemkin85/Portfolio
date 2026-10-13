@@ -1,0 +1,74 @@
+[
+  {
+    "id": "claude-101",
+    "title": { "ru": "Claude 101", "en": "Claude 101" },
+    "org": { "ru": "Anthropic", "en": "Anthropic" },
+    "year": 2026,
+    "category": "AI"
+  },
+  {
+    "id": "selectel-ai",
+    "title": { "ru": "ИИ для бизнеса", "en": "AI for Business" },
+    "org": { "ru": "Академия Selectel", "en": "Selectel Academy" },
+    "year": 2026,
+    "category": "AI",
+    "file": "/certificates/selectel-ai.jpg"
+  },
+  {
+    "id": "mcp-school",
+    "title": { "ru": "Школа MCP для AI-агентов", "en": "MCP School for AI Agents" },
+    "org": { "ru": "ООО «Терра ЭйАй»", "en": "Terra AI" },
+    "year": 2026,
+    "category": "AI"
+  },
+  {
+    "id": "claude-cowork",
+    "title": { "ru": "Введение в Claude Cowork", "en": "Introduction to Claude Cowork" },
+    "org": { "ru": "AI University / Стадика", "en": "AI University / Stadika" },
+    "year": 2026,
+    "category": "AI"
+  },
+  {
+    "id": "yandex-ecommerce",
+    "title": { "ru": "Маркетинг в E-commerce", "en": "E-commerce Marketing" },
+    "org": { "ru": "Яндекс", "en": "Yandex" },
+    "year": 2024,
+    "category": "Marketing"
+  },
+  {
+    "id": "medialogia-expert",
+    "title": { "ru": "Сертифицированный эксперт «Медиалогии»", "en": "Medialogia Certified Expert" },
+    "org": { "ru": "Медиалогия", "en": "Medialogia" },
+    "year": 2024,
+    "category": "Marketing"
+  },
+  {
+    "id": "bonnie-slide",
+    "title": { "ru": "Интенсив по Figma", "en": "Figma Intensive" },
+    "org": { "ru": "Bonnie & Slides", "en": "Bonnie & Slides" },
+    "year": 2024,
+    "category": "Marketing",
+    "file": "/certificates/bonnie-slide.png"
+  },
+  {
+    "id": "mini-mba",
+    "title": { "ru": "MINI MBA Professional", "en": "MINI MBA Professional" },
+    "org": { "ru": "Universal Business School, Edinburgh", "en": "Universal Business School, Edinburgh" },
+    "year": 2022,
+    "category": "Management"
+  },
+  {
+    "id": "business-english",
+    "title": { "ru": "Business English Fundamentals", "en": "Business English Fundamentals" },
+    "org": { "ru": "Competencies Development Bureau", "en": "Competencies Development Bureau" },
+    "year": 2022,
+    "category": "Language"
+  },
+  {
+    "id": "hse-diploma",
+    "title": { "ru": "Диплом «Маркетинг и менеджмент»", "en": "Degree in Marketing and Management" },
+    "org": { "ru": "НИУ ВШЭ", "en": "HSE University" },
+    "year": 2012,
+    "category": "Education"
+  }
+]

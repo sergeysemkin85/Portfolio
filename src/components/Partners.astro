@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHeader from './SectionHeader.astro';
+import Logo from './Logo.astro';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const u = ui[lang];
+const partners = await getCollection('partners');
+// Повторяем ленту, чтобы на широких экранах она не обрывалась
+const loop = partners.length < 8 ? [...partners, ...partners] : partners;
+---
+
+<section id="partners" class="section overflow-hidden" aria-labelledby="partners-title">
+  <div class="container-x">
+    <SectionHeader eyebrow="04" title={u.partnersTitle} lead={u.partnersLead} id="partners-title" />
+  </div>
+  <div class="reveal mt-12 marquee" tabindex="0" aria-label={u.partnersTitle} role="region">
+    {
+      [false, true].map((hidden) => (
+        <ul class="marquee-track" aria-hidden={hidden ? 'true' : undefined}>
+          {loop.map(({ data }, i) => {
+            const label = data.name[lang];
+            const content = <Logo src={data.logo} alt={label} height={96} class="w-56 border border-line" eager />;
+            const dup = hidden || i >= partners.length;
+            return (
+              <li class="logo-hover relative" aria-hidden={dup && !hidden ? 'true' : undefined}>
+                {data.url ? (
+                  <a href={data.url} target="_blank" rel="noopener noreferrer" tabindex={dup ? -1 : undefined} aria-label={label}>
+                    {content}
+                  </a>
+                ) : (
+                  content
+                )}
+                {data.placeholder && <span class="placeholder-badge absolute top-2 right-2 bg-white">{u.placeholder}</span>}
+              </li>
+            );
+          })}
+        </ul>
+      ))
+    }
+  </div>
+</section>

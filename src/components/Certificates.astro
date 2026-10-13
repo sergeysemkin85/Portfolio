@@ -1,0 +1,124 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import SectionHeader from './SectionHeader.astro';
+import Icon from './Icon.astro';
+import { getImage, withBase } from '../lib/images';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const u = ui[lang];
+const publicDir = path.resolve('public');
+const exists = (p: string) => fs.existsSync(path.join(publicDir, p));
+
+const certificates = (await getCollection('certificates')).map(({ id, data }) => {
+  const file = data.file ?? `/certificates/${id}.pdf`;
+  const isImage = /\.(png|jpe?g|webp)$/i.test(file);
+  const previewPath = isImage ? file : `/certificates/previews/${id}.webp`;
+  return {
+    id,
+    ...data,
+    file,
+    kind: isImage ? 'image' : 'pdf',
+    hasFile: exists(file),
+    preview: exists(previewPath) ? previewPath : '',
+  };
+});
+const categories = ['AI', 'Marketing', 'Management', 'Education', 'Language'].filter((c) => certificates.some((x) => x.category === c));
+const awards = await getCollection('awards');
+---
+
+<section id="certificates" class="section" aria-labelledby="certificates-title">
+  <div class="container-x">
+    <SectionHeader eyebrow="02" title={u.certificatesTitle} lead={u.certificatesLead} id="certificates-title" />
+
+    <ul class="reveal mt-10 grid gap-4 sm:grid-cols-3">
+      {
+        awards.map(({ data }) => {
+          const img = getImage(data.image);
+          return (
+            <li class="flex items-center gap-4 rounded-2xl border border-gold/40 bg-gradient-to-br from-gold/10 to-transparent p-4">
+              {img ? (
+                <Image src={img} alt="" width={128} height={128} class="h-16 w-16 shrink-0 rounded-xl bg-white object-cover" loading="lazy" />
+              ) : (
+                <span class="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gold/15 text-gold">
+                  <Icon name="trophy" size={28} />
+                </span>
+              )}
+              <div>
+                <p class="leading-snug font-semibold">{data.title[lang]}</p>
+                <p class="mt-1 text-sm text-muted">{data.company[lang]}</p>
+              </div>
+            </li>
+          );
+        })
+      }
+    </ul>
+
+    <div class="reveal mt-12 flex flex-wrap gap-2" role="group" aria-label={lang === 'ru' ? 'Фильтр по категориям' : 'Filter by category'} data-cert-filter>
+      <button type="button" data-filter="all" aria-pressed="true" class="btn-ghost btn-sm aria-pressed:border-brand aria-pressed:bg-brand aria-pressed:text-brand-ink">{u.all}</button>
+      {
+        categories.map((c) => (
+          <button type="button" data-filter={c} aria-pressed="false" class="btn-ghost btn-sm aria-pressed:border-brand aria-pressed:bg-brand aria-pressed:text-brand-ink">
+            {c}
+          </button>
+        ))
+      }
+    </div>
+
+    <ul class="mt-6 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 xl:grid-cols-5">
+      {
+        certificates.map((c) => {
+          const title = c.title[lang];
+          return (
+            <li data-cert-category={c.category} class="reveal">
+              <article class="card group flex h-full flex-col overflow-hidden">
+                <div class="relative aspect-[4/3] overflow-hidden border-b border-line bg-surface-2">
+                  {c.preview ? (
+                    <img src={withBase(c.preview)} alt="" loading="lazy" decoding="async" width="400" height="300" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
+                  ) : (
+                    <div class="flex h-full flex-col items-center justify-center gap-2 text-muted">
+                      <Icon name="file" size={36} />
+                      <span class="placeholder-badge">{u.placeholder}</span>
+                    </div>
+                  )}
+                  <span class="absolute top-2 left-2 rounded-full bg-bg/90 px-2 py-0.5 text-[0.7rem] font-semibold">{c.category}</span>
+                </div>
+                <div class="flex flex-1 flex-col p-4">
+                  <h3 class="text-[0.95rem] leading-snug font-semibold [overflow-wrap:anywhere] hyphens-auto" style="font-family:var(--font-sans)">{title}</h3>
+                  <p class="mt-1 text-sm text-muted">
+                    {c.org[lang]} · {c.year}
+                  </p>
+                  <div class="mt-auto pt-3">
+                    {c.hasFile ? (
+                      <button
+                        type="button"
+                        class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:underline"
+                        data-open-viewer
+                        data-src={withBase(c.file)}
+                        data-kind={c.kind}
+                        data-title={`${title} — ${c.org[lang]}`}
+                        data-download="true"
+                        data-download-goal="download_certificate"
+                      >
+                        <Icon name="eye" size={16} />
+                        {u.open}
+                      </button>
+                    ) : (
+                      <span class="text-sm text-muted">{u.fileSoon}</span>
+                    )}
+                  </div>
+                </div>
+              </article>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</section>
