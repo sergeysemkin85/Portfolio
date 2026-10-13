@@ -18,6 +18,12 @@
     "group": "ads"
   },
   {
+    "id": "vk-ads",
+    "name": "VK Реклама",
+    "logo": "logos/tools/vk-ads.webp",
+    "group": "ads"
+  },
+  {
     "id": "yandex-webmaster",
     "name": "Яндекс Вебмастер",
     "logo": "logos/tools/yandex-webmaster.webp",
