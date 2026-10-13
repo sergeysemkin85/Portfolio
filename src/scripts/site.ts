@@ -270,7 +270,23 @@ function initTooltips() {
   });
 }
 
+function initVideoFacades() {
+  // Плеер YouTube грузится только по клику: страница остаётся быстрой
+  document.querySelectorAll<HTMLButtonElement>('[data-video-facade]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      iframe.src = btn.dataset.src!;
+      iframe.title = btn.dataset.title ?? '';
+      iframe.className = 'absolute inset-0 h-full w-full';
+      iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture; fullscreen');
+      iframe.setAttribute('allowfullscreen', '');
+      btn.replaceWith(iframe);
+    });
+  });
+}
+
 export function initSite() {
+  initVideoFacades();
   initReveal();
   initCounters();
   initTheme();

@@ -19,14 +19,42 @@ const items = await Promise.all(
     return { id, ...data, img, large: large.src };
   }),
 );
+// Видео выводятся широким блоком над сеткой, остальное — в сетке
+const videos = items.filter((c) => c.video);
+const grid = items.filter((c) => !c.video);
 ---
 
 <section id="creatives" class="section" aria-labelledby="creatives-title">
   <div class="container-x">
     <SectionHeader eyebrow="12" title={u.creativesTitle} lead={u.creativesLead} id="creatives-title" />
+    {
+      videos.map((v) => (
+        <figure class="reveal relative left-1/2 mt-12 w-screen max-w-[1600px] -translate-x-1/2 sm:px-6 lg:px-10">
+          <div class="relative aspect-video w-full overflow-hidden bg-black sm:rounded-2xl" data-video-frame>
+            <button
+              type="button"
+              class="group absolute inset-0 block h-full w-full"
+              data-video-facade
+              data-src={v.video}
+              data-title={v.title[lang]}
+              data-goal="play_video"
+              aria-label={(lang === 'ru' ? 'Смотреть видео: ' : 'Watch video: ') + v.title[lang]}
+            >
+              <Image src={v.img} alt="" widths={[640, 960, 1280, 1600]} sizes="(min-width:1280px) 1200px, 100vw" class="h-full w-full object-cover opacity-90 transition-opacity group-hover:opacity-100" loading="lazy" />
+              <span aria-hidden="true" class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                <span class="flex h-20 w-20 items-center justify-center rounded-full bg-white/90 text-accent shadow-2xl transition-transform group-hover:scale-110 sm:h-24 sm:w-24">
+                  <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M8 5.5v13l11-6.5z" /></svg>
+                </span>
+              </span>
+            </button>
+          </div>
+          <figcaption class="mx-auto mt-4 max-w-7xl px-4 text-lg font-semibold sm:px-0 sm:text-xl">{v.title[lang]}</figcaption>
+        </figure>
+      ))
+    }
     <ul class="mt-12 columns-2 gap-3 sm:gap-4 md:columns-3 xl:columns-4">
       {
-        items.map((c) => {
+        grid.map((c) => {
           const title = c.title[lang];
           const isPdf = Boolean(c.file);
           const isVideo = Boolean(c.video);
