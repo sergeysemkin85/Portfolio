@@ -23,6 +23,10 @@
       "ru": "Россия",
       "en": "Russia"
     },
+    "duration": {
+      "ru": "1,5 года",
+      "en": "1.5 years"
+    },
     "highlight": {
       "ru": "Сайт в ответах ИИ по 30 запросам, ТОП-5 Яндекса",
       "en": "Website in AI answers for 30 queries, Yandex top 5"
@@ -160,6 +164,10 @@
     "country": {
       "ru": "Южная Корея",
       "en": "South Korea"
+    },
+    "duration": {
+      "ru": "1,5 года",
+      "en": "1.5 years"
     },
     "highlight": {
       "ru": "B2B-заявки ×20",
