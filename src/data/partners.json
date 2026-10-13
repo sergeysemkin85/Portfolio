@@ -45,6 +45,15 @@
     "url": "https://roscongress.org/"
   },
   {
+    "id": "srp",
+    "name": {
+      "ru": "Союз российских пивоваров",
+      "en": "Union of Russian Brewers"
+    },
+    "logo": "logos/partners/srp.webp",
+    "url": ""
+  },
+  {
     "id": "breweries",
     "name": {
       "ru": "Пивоварни-партнёры",
