@@ -1,10 +1,19 @@
 [
   {
     "id": "russia-africa-2023",
-    "title": { "ru": "Саммит и экономический форум «Россия — Африка»", "en": "Russia–Africa Summit and Economic Forum" },
-    "location": { "ru": "Санкт-Петербург, Россия", "en": "Saint Petersburg, Russia" },
+    "title": {
+      "ru": "Саммит и экономический форум «Россия — Африка»",
+      "en": "Russia–Africa Summit and Economic Forum"
+    },
+    "location": {
+      "ru": "Санкт-Петербург, Россия",
+      "en": "Saint Petersburg, Russia"
+    },
     "date": "2023-07",
-    "role": { "ru": "Организация участия в форуме, назначение деловых встреч, участие в переговорах", "en": "Organized the company’s participation in the forum, scheduled business meetings and took part in negotiations" },
+    "role": {
+      "ru": "Организация участия в форуме, назначение деловых встреч, участие в переговорах",
+      "en": "Organized the company’s participation in the forum, scheduled business meetings and took part in negotiations"
+    },
     "description": {
       "ru": "Второй саммит и экономический и гуманитарный форум «Россия — Африка». Встречи с импортёрами и продвижение экспортной продукции ГК «Грейнрус».",
       "en": "The second Russia–Africa Summit and Economic and Humanitarian Forum. Meetings with importers and promotion of Grainrus Group export products."
@@ -16,15 +25,24 @@
   },
   {
     "id": "asia-mission",
-    "title": { "ru": "Бизнес-миссия в Азию", "en": "Business mission to Asia" },
-    "location": { "ru": "Азия", "en": "Asia" },
+    "title": {
+      "ru": "Бизнес-миссия в Азию",
+      "en": "Business mission to Asia"
+    },
+    "location": {
+      "ru": "Азия",
+      "en": "Asia"
+    },
     "date": "",
-    "role": { "ru": "Организация участия компании", "en": "Company participation lead" },
+    "role": {
+      "ru": "Организация участия компании",
+      "en": "Company participation lead"
+    },
     "description": {
       "ru": "Бизнес-миссия ГК «Грейнрус»: переговоры с дистрибьюторами и экспортные контракты.",
       "en": "Grainrus Group business mission: talks with distributors and export contracts."
     },
-    "image": "",
+    "image": "events/vietnam.jpg",
     "url": "",
     "embedUrl": "",
     "source": "linkedin",
@@ -32,10 +50,19 @@
   },
   {
     "id": "cis-expo",
-    "title": { "ru": "Международная выставка в СНГ", "en": "International trade show in the CIS" },
-    "location": { "ru": "СНГ", "en": "CIS" },
+    "title": {
+      "ru": "Международная выставка в СНГ",
+      "en": "International trade show in the CIS"
+    },
+    "location": {
+      "ru": "СНГ",
+      "en": "CIS"
+    },
     "date": "",
-    "role": { "ru": "Организация стенда компании", "en": "Company booth lead" },
+    "role": {
+      "ru": "Организация стенда компании",
+      "en": "Company booth lead"
+    },
     "description": {
       "ru": "Участие ГК «Грейнрус» в отраслевой выставке при поддержке РЭЦ.",
       "en": "Grainrus Group at an industry trade show supported by the Russian Export Center."
@@ -48,10 +75,19 @@
   },
   {
     "id": "amc-europe",
-    "title": { "ru": "Деловая поездка в Европу (AMC)", "en": "Business trip to Europe (AMC)" },
-    "location": { "ru": "Европа", "en": "Europe" },
+    "title": {
+      "ru": "Деловая поездка в Европу (AMC)",
+      "en": "Business trip to Europe (AMC)"
+    },
+    "location": {
+      "ru": "Европа",
+      "en": "Europe"
+    },
     "date": "",
-    "role": { "ru": "Представитель российского подразделения", "en": "Representative of the Russian subsidiary" },
+    "role": {
+      "ru": "Представитель российского подразделения",
+      "en": "Representative of the Russian subsidiary"
+    },
     "description": {
       "ru": "Встречи в головном офисе AMC и обмен практиками с международными командами.",
       "en": "Meetings at AMC head office and best-practice exchange with international teams."
