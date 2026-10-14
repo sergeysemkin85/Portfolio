@@ -25,6 +25,55 @@
     "image": "creatives/img-2026-04-14.jpg"
   },
   {
+    "id": "grainrus-catalog",
+    "title": {
+      "ru": "Каталог продукции «Грейнрус»",
+      "en": "Grainrus product catalog"
+    },
+    "image": "creatives/grainrus-catalog.webp",
+    "file": "/files/grainrus-catalog.pdf"
+  },
+  {
+    "id": "avangard-malt-bag",
+    "title": {
+      "ru": "Брендированная упаковка солода «Авангард-Агро» на стенде",
+      "en": "Avangard-Agro branded malt packaging at the booth"
+    },
+    "image": "creatives/avangard-malt-bag.jpg"
+  },
+  {
+    "id": "grainford-beer-field",
+    "title": {
+      "ru": "Визуал Грейнфорд-Агро: пиво и ячменное поле",
+      "en": "Grainford-Agro visual: beer and barley field"
+    },
+    "image": "creatives/grainford-beer-field.jpg"
+  },
+  {
+    "id": "inferit-1c-banner",
+    "title": {
+      "ru": "Баннер Инферит Облако: выделенные серверы для 1С",
+      "en": "Inferit Cloud banner: dedicated servers for 1C"
+    },
+    "image": "creatives/inferit-1c-banner.jpg"
+  },
+  {
+    "id": "grainrus-bag",
+    "title": {
+      "ru": "Мерч: брендированный пакет «Грейнрус»",
+      "en": "Merch: Grainrus branded bag"
+    },
+    "image": "creatives/grainrus-bag.jpg"
+  },
+  {
+    "id": "grainrus-powerbank",
+    "title": {
+      "ru": "Мерч: брендированный powerbank «Грейнрус»",
+      "en": "Merch: Grainrus branded power bank"
+    },
+    "image": "creatives/grainrus-powerbank.jpg"
+  },
+  {
     "id": "grainrus-25",
     "title": {
       "ru": "Ключевой визуал к 25-летию ГК «Грейнрус»",
