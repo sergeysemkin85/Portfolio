@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Header from './Header.astro';
 import Hero from './Hero.astro';
 import Achievements from './Achievements.astro';
+import Awards from './Awards.astro';
 import Certificates from './Certificates.astro';
 import Companies from './Companies.astro';
 import Partners from './Partners.astro';
@@ -33,11 +34,12 @@ const u = ui[lang];
     <Companies lang={lang} />
     <LinkedinCompanies lang={lang} />
     <Clients lang={lang} />
-    <Certificates lang={lang} />
+    <Awards lang={lang} />
     <Partners lang={lang} />
     <EventsCarousel lang={lang} collection="eventsInternational" id="eventsInternational" title={u.eventsIntTitle} lead={u.eventsIntLead} />
     <EventsCarousel lang={lang} collection="eventsRussia" id="eventsRussia" title={u.eventsRuTitle} lead={u.eventsRuLead} />
     <Media lang={lang} />
+    <Certificates lang={lang} />
     <Brands lang={lang} />
     <Sites lang={lang} />
     <Tools lang={lang} />

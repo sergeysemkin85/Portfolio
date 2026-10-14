@@ -18,7 +18,8 @@ export const ui = {
     nav: {
       about: 'Обо мне',
       achievements: 'Достижения',
-      certificates: 'Сертификаты',
+      awards: 'Награды',
+      certifications: 'Сертификаты',
       companies: 'Опыт',
       partners: 'Партнёры',
       eventsInternational: 'Международные ивенты',
@@ -40,6 +41,8 @@ export const ui = {
     whatDone: 'Что сделано',
     result: 'Результат',
     certificatesTitle: 'Достижения и награды',
+    certsTitle: 'Подтверждённые навыки и сертификаты',
+    certsLead: 'Обучение, которое я прохожу постоянно: AI, маркетинг, менеджмент.',
     certificatesLead: 'Награды и отраслевое признание, полученные компаниями и проектами, которые я развивал.',
     all: 'Все',
     open: 'Открыть',
@@ -96,7 +99,8 @@ export const ui = {
     nav: {
       about: 'About',
       achievements: 'Achievements',
-      certificates: 'Certificates',
+      awards: 'Awards',
+      certifications: 'Certificates',
       companies: 'Experience',
       partners: 'Partners',
       eventsInternational: 'International events',
@@ -118,6 +122,8 @@ export const ui = {
     whatDone: 'What I did',
     result: 'Result',
     certificatesTitle: 'Achievements and awards',
+    certsTitle: 'Verified skills and certificates',
+    certsLead: 'Continuous learning in AI, marketing and management.',
     certificatesLead: 'Awards and industry recognition earned by the companies and projects I helped grow.',
     all: 'All',
     open: 'Open',
@@ -174,11 +180,12 @@ export const sectionIds = [
   'companies',
   'linkedin',
   'clients',
-  'certificates',
+  'awards',
   'partners',
   'eventsInternational',
   'eventsRussia',
   'media',
+  'certifications',
   'brands',
   'sites',
   'tools',
@@ -187,7 +194,7 @@ export const sectionIds = [
 ] as const;
 
 /** Короткое меню в шапке на широких экранах; полное — в выпадающем меню. */
-export const primaryNav = ['achievements', 'companies', 'certificates', 'eventsInternational', 'media', 'brands', 'creatives'] as const;
+export const primaryNav = ['achievements', 'companies', 'certifications', 'eventsInternational', 'media', 'brands', 'creatives'] as const;
 
 export function formatDate(value: string, lang: Lang): string {
   if (!value) return '';

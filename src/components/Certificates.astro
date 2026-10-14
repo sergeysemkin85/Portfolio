@@ -1,11 +1,10 @@
 ---
 import fs from 'node:fs';
 import path from 'node:path';
-import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import SectionHeader from './SectionHeader.astro';
 import Icon from './Icon.astro';
-import { getImage, withBase } from '../lib/images';
+import { withBase } from '../lib/images';
 import { ui, type Lang, sectionNo, sectionBg } from '../lib/i18n';
 
 interface Props {
@@ -30,37 +29,13 @@ const certificates = (await getCollection('certificates')).map(({ id, data }) =>
   };
 });
 const categories = ['AI', 'Marketing', 'Management', 'Education', 'Language'].filter((c) => certificates.some((x) => x.category === c));
-const awards = await getCollection('awards');
 ---
 
-<section id="certificates" class:list={["section", sectionBg('certificates')]} aria-labelledby="certificates-title">
+<section id="certifications" class:list={['section', sectionBg('certifications')]} aria-labelledby="certifications-title">
   <div class="container-x">
-    <SectionHeader eyebrow={sectionNo('certificates')} title={u.certificatesTitle} lead={u.certificatesLead} id="certificates-title" />
+    <SectionHeader eyebrow={sectionNo('certifications')} title={u.certsTitle} lead={u.certsLead} id="certifications-title" />
 
-    <ul class="reveal mt-10 grid gap-4 sm:grid-cols-3">
-      {
-        awards.map(({ data }) => {
-          const img = getImage(data.image);
-          return (
-            <li class="flex items-center gap-4 rounded-2xl border border-gold/40 bg-gradient-to-br from-gold/10 to-transparent p-4">
-              {img ? (
-                <Image src={img} alt="" width={128} height={128} class="h-16 w-16 shrink-0 rounded-xl bg-white object-cover" loading="lazy" />
-              ) : (
-                <span class="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gold/15 text-gold">
-                  <Icon name="trophy" size={28} />
-                </span>
-              )}
-              <div>
-                <p class="leading-snug font-semibold">{data.title[lang]}</p>
-                <p class="mt-1 text-sm text-muted">{data.company[lang]}</p>
-              </div>
-            </li>
-          );
-        })
-      }
-    </ul>
-
-    <div class="reveal mt-12 flex flex-wrap gap-2" role="group" aria-label={lang === 'ru' ? 'Фильтр по категориям' : 'Filter by category'} data-cert-filter>
+    <div class="reveal mt-10 flex flex-wrap gap-2" role="group" aria-label={lang === 'ru' ? 'Фильтр по категориям' : 'Filter by category'} data-cert-filter>
       <button type="button" data-filter="all" aria-pressed="true" class="btn-ghost btn-sm aria-pressed:border-brand aria-pressed:bg-brand aria-pressed:text-brand-ink">{u.all}</button>
       {
         categories.map((c) => (
