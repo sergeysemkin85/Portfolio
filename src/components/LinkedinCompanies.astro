@@ -16,7 +16,7 @@ const companies = await getCollection('companies');
 
 <section id="linkedin" class="section overflow-hidden bg-surface-2/60" aria-labelledby="linkedin-title">
   <div class="container-x">
-    <SectionHeader eyebrow="07" title={u.linkedinTitle} lead={u.linkedinLead} id="linkedin-title" />
+    <SectionHeader eyebrow="03" title={u.linkedinTitle} lead={u.linkedinLead} id="linkedin-title" />
     <Carousel lang={lang} label={u.linkedinTitle} perView={4}>
       {
         companies.map(({ data }) => (

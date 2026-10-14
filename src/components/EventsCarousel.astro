@@ -15,14 +15,15 @@ interface Props {
   eyebrow: string;
   title: string;
   lead: string;
+  tinted?: boolean;
 }
-const { lang, collection, id, eyebrow, title, lead } = Astro.props;
+const { lang, collection, id, eyebrow, title, lead, tinted = false } = Astro.props;
 const u = ui[lang];
 const events = await getCollection(collection);
 const icon = { linkedin: 'linkedin', telegram: 'telegram', vk: 'vk', site: 'globe' } as const;
 ---
 
-<section id={id} class="section overflow-hidden" aria-labelledby={`${id}-title`}>
+<section id={id} class:list={["section overflow-hidden", tinted && "bg-surface-2/60"]} aria-labelledby={`${id}-title`}>
   <div class="container-x">
     <SectionHeader eyebrow={eyebrow} title={title} lead={lead} id={`${id}-title`} />
     <Carousel lang={lang} label={title}>

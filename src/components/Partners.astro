@@ -14,9 +14,9 @@ const partners = await getCollection('partners');
 const loop = partners.length < 8 ? [...partners, ...partners] : partners;
 ---
 
-<section id="partners" class="section overflow-hidden" aria-labelledby="partners-title">
+<section id="partners" class="section overflow-hidden bg-surface-2/60" aria-labelledby="partners-title">
   <div class="container-x">
-    <SectionHeader eyebrow="04" title={u.partnersTitle} lead={u.partnersLead} id="partners-title" />
+    <SectionHeader eyebrow="05" title={u.partnersTitle} lead={u.partnersLead} id="partners-title" />
   </div>
   <div class="reveal mt-12 marquee" tabindex="0" aria-label={u.partnersTitle} role="region">
     {
