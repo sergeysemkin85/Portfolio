@@ -165,8 +165,8 @@ export type UI = (typeof ui)['ru'] | (typeof ui)['en'];
 export const sectionIds = [
   'about',
   'achievements',
-  'certificates',
   'companies',
+  'certificates',
   'partners',
   'eventsInternational',
   'eventsRussia',
@@ -180,7 +180,7 @@ export const sectionIds = [
 ] as const;
 
 /** Короткое меню в шапке на широких экранах; полное — в выпадающем меню. */
-export const primaryNav = ['achievements', 'certificates', 'companies', 'eventsInternational', 'media', 'brands', 'creatives'] as const;
+export const primaryNav = ['achievements', 'companies', 'certificates', 'eventsInternational', 'media', 'brands', 'creatives'] as const;
 
 export function formatDate(value: string, lang: Lang): string {
   if (!value) return '';
