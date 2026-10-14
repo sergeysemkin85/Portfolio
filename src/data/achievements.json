@@ -132,8 +132,8 @@
   {
     "id": "media-index",
     "title": {
-      "ru": "Медиаиндекс ×{n}",
-      "en": "Media index ×{n}"
+      "ru": "Медиаиндекс, цитируемость в СМИ ×{n}",
+      "en": "Media index and press citations ×{n}"
     },
     "count": 10,
     "company": {
