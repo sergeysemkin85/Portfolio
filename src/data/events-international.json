@@ -26,12 +26,12 @@
   {
     "id": "asia-mission",
     "title": {
-      "ru": "Бизнес-миссия в Азию",
-      "en": "Business mission to Asia"
+      "ru": "Выставка Vietfood, Вьетнам",
+      "en": "Vietfood trade show, Vietnam"
     },
     "location": {
-      "ru": "Азия",
-      "en": "Asia"
+      "ru": "Хошимин, Вьетнам",
+      "en": "Ho Chi Minh City, Vietnam"
     },
     "date": "",
     "role": {
@@ -39,14 +39,13 @@
       "en": "Company participation lead"
     },
     "description": {
-      "ru": "Бизнес-миссия ГК «Грейнрус»: переговоры с дистрибьюторами и экспортные контракты.",
-      "en": "Grainrus Group business mission: talks with distributors and export contracts."
+      "ru": "Стенд ГК «Грейнрус» на международной выставке продуктов питания и напитков Vietfood: переговоры с дистрибьюторами и импортёрами, продвижение солода и зерновых культур.",
+      "en": "Grainrus Group booth at the Vietfood international food and beverage exhibition: talks with distributors and importers, promotion of malt and grain."
     },
     "image": "events/vietnam.jpg",
     "url": "",
     "embedUrl": "",
-    "source": "linkedin",
-    "placeholder": true
+    "source": "linkedin"
   },
   {
     "id": "cis-expo",
