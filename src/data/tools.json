@@ -120,6 +120,12 @@
     "group": "ai"
   },
   {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "logo": "logos/tools/chatgpt.webp",
+    "group": "ai"
+  },
+  {
     "id": "nano-banana",
     "name": "Nano Banana Pro (Google)",
     "logo": "logos/tools/nano-banana.jpg",
