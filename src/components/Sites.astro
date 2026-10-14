@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import SectionHeader from './SectionHeader.astro';
 import Icon from './Icon.astro';
 import { getImage } from '../lib/images';
-import { ui, type Lang } from '../lib/i18n';
+import { ui, type Lang, sectionNo, sectionBg } from '../lib/i18n';
 
 interface Props {
   lang: Lang;
@@ -14,9 +14,9 @@ const u = ui[lang];
 const sites = await getCollection('sites');
 ---
 
-<section id="sites" class="section" aria-labelledby="sites-title">
+<section id="sites" class:list={["section", sectionBg('sites')]} aria-labelledby="sites-title">
   <div class="container-x">
-    <SectionHeader eyebrow="10" title={u.sitesTitle} lead={u.sitesLead} id="sites-title" />
+    <SectionHeader eyebrow={sectionNo('sites')} title={u.sitesTitle} lead={u.sitesLead} id="sites-title" />
     <ul class="mt-12 grid gap-5 md:grid-cols-2">
       {
         sites.map(({ data }) => {

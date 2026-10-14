@@ -7,7 +7,7 @@ import Logo from './Logo.astro';
 import Icon from './Icon.astro';
 import { site } from '../lib/site';
 import { getImage } from '../lib/images';
-import { t, ui, formatDate, type Lang } from '../lib/i18n';
+import { t, ui, formatDate, type Lang, sectionNo, sectionBg } from '../lib/i18n';
 
 interface Props {
   lang: Lang;
@@ -17,9 +17,9 @@ const u = ui[lang];
 const media = await getCollection('media');
 ---
 
-<section id="media" class="section overflow-hidden" aria-labelledby="media-title">
+<section id="media" class:list={["section overflow-hidden", sectionBg('media')]} aria-labelledby="media-title">
   <div class="container-x">
-    <SectionHeader eyebrow="08" title={u.mediaTitle} id="media-title" />
+    <SectionHeader eyebrow={sectionNo('media')} title={u.mediaTitle} id="media-title" />
     <p class="reveal mt-8 rounded-2xl border border-line bg-surface p-5 text-lg font-semibold sm:p-6 sm:text-2xl" style="font-family:var(--font-display)">
       <span class="text-brand">{t(site.mediaStat, lang)}</span>
     </p>

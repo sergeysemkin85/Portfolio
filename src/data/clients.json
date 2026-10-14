@@ -1,0 +1,5 @@
+[
+  { "id": "rusagro", "name": { "ru": "Группа компаний «Русагро»", "en": "Rusagro Group" }, "logo": "logos/clients/rusagro.webp" },
+  { "id": "thai-tan", "name": { "ru": "Thái Tân (Вьетнам)", "en": "Thái Tân (Vietnam)" }, "logo": "logos/clients/thai-tan.webp" },
+  { "id": "alp-itsm", "name": { "ru": "ALP ITSM", "en": "ALP ITSM" }, "logo": "logos/clients/alp-itsm.webp" }
+]

@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHeader from './SectionHeader.astro';
+import Logo from './Logo.astro';
+import { ui, type Lang, sectionNo, sectionBg } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const u = ui[lang];
+const clients = await getCollection('clients');
+---
+
+<section id="clients" class:list={['section', sectionBg('clients')]} aria-labelledby="clients-title">
+  <div class="container-x">
+    <SectionHeader eyebrow={sectionNo('clients')} title={u.clientsTitle} lead={u.clientsLead} id="clients-title" />
+    <ul class="reveal mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+      {
+        clients.map(({ data }) => (
+          <li class="logo-hover">
+            {data.url ? (
+              <a href={data.url} target="_blank" rel="noopener noreferrer" aria-label={data.name[lang]}>
+                <Logo src={data.logo} alt={data.name[lang]} height={120} class="w-full border border-line" />
+              </a>
+            ) : (
+              <Logo src={data.logo} alt={data.name[lang]} height={120} class="w-full border border-line" />
+            )}
+            <p class="mt-2 text-center text-sm text-muted">{data.name[lang]}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

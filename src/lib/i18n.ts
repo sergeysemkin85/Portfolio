@@ -24,6 +24,7 @@ export const ui = {
       eventsInternational: 'Международные ивенты',
       eventsRussia: 'Мероприятия в России',
       linkedin: 'Компании в LinkedIn',
+      clients: 'Клиенты',
       media: 'СМИ',
       brands: 'Бренды',
       sites: 'Сайты',
@@ -65,6 +66,8 @@ export const ui = {
     liLocation: 'Штаб-квартира',
     liFollowers: 'Подписчики',
     liEmployees: 'Сотрудники',
+    clientsTitle: 'Клиенты, которые были привлечены',
+    clientsLead: 'Результат выстроенной воронки: от первого клика до встречи и подписанного контракта.',
     mediaTitle: 'Публикации в СМИ',
     readArticle: 'Читать статью',
     brandsTitle: 'Бренды, которые я продвигал',
@@ -99,6 +102,7 @@ export const ui = {
       eventsInternational: 'International events',
       eventsRussia: 'Events in Russia',
       linkedin: 'Companies on LinkedIn',
+      clients: 'Clients',
       media: 'Media',
       brands: 'Brands',
       sites: 'Websites',
@@ -140,6 +144,8 @@ export const ui = {
     liLocation: 'Headquarters',
     liFollowers: 'Followers',
     liEmployees: 'Employees',
+    clientsTitle: 'Clients I helped bring in',
+    clientsLead: 'The result of the funnel I built: from the first click to a meeting and a signed contract.',
     mediaTitle: 'Media coverage',
     readArticle: 'Read article',
     brandsTitle: 'Brands I have promoted',
@@ -167,6 +173,7 @@ export const sectionIds = [
   'achievements',
   'companies',
   'linkedin',
+  'clients',
   'certificates',
   'partners',
   'eventsInternational',
@@ -205,3 +212,11 @@ export function yearsSpan(years: string, lang: Lang): string {
   const word = m10 === 1 && m100 !== 11 ? 'год' : m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14) ? 'года' : 'лет';
   return `${n} ${word}`;
 }
+
+/** Нумерованные разделы (без «Обо мне» и «Контактов»): номер и фон считаются по порядку в sectionIds. */
+type SectionId = (typeof sectionIds)[number];
+const numbered: readonly SectionId[] = sectionIds.filter((id) => id !== 'about' && id !== 'contacts');
+export const sectionNo = (id: SectionId) => String(numbered.indexOf(id) + 1).padStart(2, '0');
+export const contactsNo = String(numbered.length + 1).padStart(2, '0');
+/** Чередование фона: нечётные разделы серые, чётные белые */
+export const sectionBg = (id: SectionId) => (numbered.indexOf(id) % 2 === 0 ? 'bg-surface-2/60' : '');

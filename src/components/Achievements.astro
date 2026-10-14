@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import SectionHeader from './SectionHeader.astro';
-import { ui, formatNumber, type Lang } from '../lib/i18n';
+import { ui, formatNumber, type Lang, sectionNo, sectionBg } from '../lib/i18n';
 
 interface Props {
   lang: Lang;
@@ -17,9 +17,9 @@ const split = (title: string) => {
 };
 ---
 
-<section id="achievements" class="section bg-surface-2/60" aria-labelledby="achievements-title">
+<section id="achievements" class:list={["section", sectionBg('achievements')]} aria-labelledby="achievements-title">
   <div class="container-x">
-    <SectionHeader eyebrow="01" title={u.achievementsTitle} lead={u.achievementsLead} id="achievements-title" />
+    <SectionHeader eyebrow={sectionNo('achievements')} title={u.achievementsTitle} lead={u.achievementsLead} id="achievements-title" />
     <ol class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
       {
         items.map(({ data }, i) => {

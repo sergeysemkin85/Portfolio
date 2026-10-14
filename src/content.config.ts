@@ -114,6 +114,11 @@ const tools = defineCollection({
   schema: z.object({ name: z.string(), logo: img, group: z.enum(['ads', 'seo', 'crm', 'web', 'ai']) }),
 });
 
+const clients = defineCollection({
+  loader: file('src/data/clients.json'),
+  schema: z.object({ name: L, logo: img, url: url.optional() }),
+});
+
 const sites = defineCollection({
   loader: file('src/data/sites.json'),
   schema: z.object({
@@ -153,6 +158,7 @@ export const collections = {
   eventsRussia,
   media,
   brands,
+  clients,
   sites,
   tools,
   creatives,

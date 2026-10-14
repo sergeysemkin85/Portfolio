@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import SectionHeader from './SectionHeader.astro';
 import Carousel from './Carousel.astro';
 import Logo from './Logo.astro';
-import { ui, type Lang } from '../lib/i18n';
+import { ui, type Lang, sectionNo, sectionBg } from '../lib/i18n';
 
 interface Props {
   lang: Lang;
@@ -13,9 +13,9 @@ const u = ui[lang];
 const brands = await getCollection('brands');
 ---
 
-<section id="brands" class="section overflow-hidden bg-surface-2/60" aria-labelledby="brands-title">
+<section id="brands" class:list={["section overflow-hidden", sectionBg('brands')]} aria-labelledby="brands-title">
   <div class="container-x">
-    <SectionHeader eyebrow="09" title={u.brandsTitle} id="brands-title" />
+    <SectionHeader eyebrow={sectionNo('brands')} title={u.brandsTitle} id="brands-title" />
     <Carousel lang={lang} label={u.brandsTitle} perView={4}>
       {
         brands.map(({ data }) => (

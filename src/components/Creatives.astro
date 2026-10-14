@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import SectionHeader from './SectionHeader.astro';
 import Icon from './Icon.astro';
 import { getImage, withBase } from '../lib/images';
-import { ui, type Lang } from '../lib/i18n';
+import { ui, type Lang, sectionNo, sectionBg } from '../lib/i18n';
 
 interface Props {
   lang: Lang;
@@ -24,9 +24,9 @@ const videos = items.filter((c) => c.video);
 const grid = items.filter((c) => !c.video);
 ---
 
-<section id="creatives" class="section" aria-labelledby="creatives-title">
+<section id="creatives" class:list={["section", sectionBg('creatives')]} aria-labelledby="creatives-title">
   <div class="container-x">
-    <SectionHeader eyebrow="12" title={u.creativesTitle} lead={u.creativesLead} id="creatives-title" />
+    <SectionHeader eyebrow={sectionNo('creatives')} title={u.creativesTitle} lead={u.creativesLead} id="creatives-title" />
     {
       videos.map((v) => (
         <figure class="reveal relative left-1/2 mt-12 w-screen max-w-[1600px] -translate-x-1/2 sm:px-6 lg:px-10">

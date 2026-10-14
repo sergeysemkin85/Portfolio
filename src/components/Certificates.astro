@@ -6,7 +6,7 @@ import { getCollection } from 'astro:content';
 import SectionHeader from './SectionHeader.astro';
 import Icon from './Icon.astro';
 import { getImage, withBase } from '../lib/images';
-import { ui, type Lang } from '../lib/i18n';
+import { ui, type Lang, sectionNo, sectionBg } from '../lib/i18n';
 
 interface Props {
   lang: Lang;
@@ -33,9 +33,9 @@ const categories = ['AI', 'Marketing', 'Management', 'Education', 'Language'].fi
 const awards = await getCollection('awards');
 ---
 
-<section id="certificates" class="section" aria-labelledby="certificates-title">
+<section id="certificates" class:list={["section", sectionBg('certificates')]} aria-labelledby="certificates-title">
   <div class="container-x">
-    <SectionHeader eyebrow="04" title={u.certificatesTitle} lead={u.certificatesLead} id="certificates-title" />
+    <SectionHeader eyebrow={sectionNo('certificates')} title={u.certificatesTitle} lead={u.certificatesLead} id="certificates-title" />
 
     <ul class="reveal mt-10 grid gap-4 sm:grid-cols-3">
       {

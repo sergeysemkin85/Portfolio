@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import SectionHeader from './SectionHeader.astro';
 import Logo from './Logo.astro';
 import Icon from './Icon.astro';
-import { ui, yearsSpan, type Lang } from '../lib/i18n';
+import { ui, yearsSpan, type Lang, sectionNo, sectionBg } from '../lib/i18n';
 
 interface Props {
   lang: Lang;
@@ -13,9 +13,9 @@ const u = ui[lang];
 const companies = await getCollection('companies');
 ---
 
-<section id="companies" class="section" aria-labelledby="companies-title">
+<section id="companies" class:list={["section", sectionBg('companies')]} aria-labelledby="companies-title">
   <div class="container-x">
-    <SectionHeader eyebrow="02" title={u.companiesTitle} lead={u.companiesLead} id="companies-title" />
+    <SectionHeader eyebrow={sectionNo('companies')} title={u.companiesTitle} lead={u.companiesLead} id="companies-title" />
 
     <ul class="reveal mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-7">
       {
