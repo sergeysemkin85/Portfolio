@@ -36,7 +36,7 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL || format('https://{0}.github.io', github.repository_owner) }}
           BASE_PATH: ${{ vars.BASE_PATH || format('/{0}', github.event.repository.name) }}
           PUBLIC_YM_ID: ${{ vars.PUBLIC_YM_ID }}
-          PUBLIC_GA_ID: ${{ vars.PUBLIC_GA_ID }}
+          PUBLIC_GA_ID: ${{ vars.PUBLIC_GA_ID || 'G-EM5C70MPTX' }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
