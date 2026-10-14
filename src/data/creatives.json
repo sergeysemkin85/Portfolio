@@ -155,22 +155,6 @@
     "image": "creatives/grainford-elevator.png"
   },
   {
-    "id": "inferit-ad-1",
-    "title": {
-      "ru": "Объявления Инферит Облако в Яндекс Директ",
-      "en": "Inferit Cloud ads in Yandex Direct"
-    },
-    "image": "creatives/inferit-ad-1.png"
-  },
-  {
-    "id": "inferit-ad-3",
-    "title": {
-      "ru": "Объявление Инферит Облако: выделенный сервер",
-      "en": "Inferit Cloud ad: dedicated server"
-    },
-    "image": "creatives/inferit-ad-3.png"
-  },
-  {
     "id": "grainrus-product-1",
     "title": {
       "ru": "Предметная съёмка продукции «Грейнрус»",
