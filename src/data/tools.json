@@ -18,6 +18,12 @@
     "group": "ads"
   },
   {
+    "id": "elama",
+    "name": "eLama",
+    "logo": "logos/tools/elama.webp",
+    "group": "ads"
+  },
+  {
     "id": "vk-ads",
     "name": "VK Реклама",
     "logo": "logos/tools/vk-ads.webp",
