@@ -25,6 +25,22 @@
     "image": "creatives/img-2026-04-14.jpg"
   },
   {
+    "id": "stand-grainrus-expo",
+    "title": {
+      "ru": "Разработка дизайна и застройки стендов",
+      "en": "Booth design and build"
+    },
+    "image": "events/grainrus-expos.jpg"
+  },
+  {
+    "id": "stand-vietnam",
+    "title": {
+      "ru": "Разработка дизайна и застройки стендов",
+      "en": "Booth design and build"
+    },
+    "image": "events/vietnam.jpg"
+  },
+  {
     "id": "grainrus-catalog",
     "title": {
       "ru": "Каталог продукции «Грейнрус»",
