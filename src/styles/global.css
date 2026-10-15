@@ -132,3 +132,33 @@
 dialog::backdrop { background: rgb(5 10 25 / 0.72); backdrop-filter: blur(3px); }
 dialog[open] { animation: dialog-in 0.2s ease; }
 @keyframes dialog-in { from { opacity: 0; transform: translateY(8px) scale(0.98); } }
+
+/* ===== Печать и PDF-версия сайта ===== */
+@media print {
+  @page { size: A4; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html { scroll-padding-top: 0; }
+  [data-header], [data-menu-panel], #viewer, .carousel-nav, .carousel-dots, [data-cert-filter], a[href="#main"] { display: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .section { padding-top: 3rem; padding-bottom: 3rem; }
+  #top { padding-top: 2rem; }
+  /* Карусели: все карточки сеткой */
+  .swiper.peek { clip-path: none !important; overflow: visible !important; }
+  .swiper-wrapper { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; transform: none !important; }
+  [data-per-view='4'] .swiper-wrapper { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .swiper-slide { width: auto !important; margin: 0 !important; break-inside: avoid; }
+  .swiper-slide-duplicate { display: none !important; }
+  /* Бегущая лента партнёров: статичная сетка */
+  .marquee { flex-wrap: wrap; justify-content: center; mask-image: none; }
+  .marquee-track { animation: none !important; flex-wrap: wrap; justify-content: center; }
+  .marquee-track[aria-hidden='true'], .marquee-track li[aria-hidden='true'] { display: none; }
+  .logo-mono { filter: none; opacity: 1; }
+  .card, figure, li { break-inside: avoid; }
+  h2 { break-after: avoid; }
+  /* Размытые декоративные пятна и фильтры растрируются в огромные картинки — в PDF их не выводим */
+  .blur-3xl { display: none !important; }
+  /* Градиенты-подложки часть PDF-просмотрщиков показывает неверно — заменяем сплошной заливкой */
+  [class*="bg-gradient-to"] { background-image: none !important; }
+  #creatives button > span.absolute { background-color: rgb(0 0 0 / 0.62) !important; }
+  * { backdrop-filter: none !important; filter: none !important; box-shadow: none !important; }
+}

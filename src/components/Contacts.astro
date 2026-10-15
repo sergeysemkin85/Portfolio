@@ -29,6 +29,9 @@ const links = [
         <a href={withBase(site.resume)} download class="btn bg-white text-accent hover:bg-white/90" data-goal="download_resume">
           <Icon name="download" size={18} />{u.downloadResume}
         </a>
+        <a href={withBase(`/portfolio-semkin-${lang}.pdf`)} download class="btn border border-white/40 text-white hover:bg-white/10 print:hidden" data-goal="download_site_pdf">
+          <Icon name="file" size={18} />{u.downloadSitePdf}
+        </a>
         <a href={c.telegramUrl} target="_blank" rel="noopener noreferrer" class="btn border border-white/40 text-white hover:bg-white/10" data-goal="click_telegram">
           <Icon name="telegram" size={18} />{u.writeTelegram}
         </a>

@@ -37,6 +37,11 @@ jobs:
           BASE_PATH: ${{ vars.BASE_PATH || format('/{0}', github.event.repository.name) }}
           PUBLIC_YM_ID: ${{ vars.PUBLIC_YM_ID }}
           PUBLIC_GA_ID: ${{ vars.PUBLIC_GA_ID || 'G-EM5C70MPTX' }}
+      # PDF-версия сайта для кнопки «Скачать в PDF»
+      - run: npx playwright-core install --with-deps chromium
+      - run: npm run pdf
+        env:
+          BASE_PATH: ${{ vars.BASE_PATH || format('/{0}', github.event.repository.name) }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

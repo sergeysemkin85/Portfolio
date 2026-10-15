@@ -27,6 +27,9 @@ const resume = withBase(site.resume);
         <a href={resume} download class="btn-primary" data-goal="download_resume">
           <Icon name="download" size={18} />{u.downloadResume}
         </a>
+        <a href={withBase(`/portfolio-semkin-${lang}.pdf`)} download class="btn-ghost print:hidden" data-goal="download_site_pdf">
+          <Icon name="file" size={18} />{u.downloadSitePdf}
+        </a>
         <a href={site.contacts.telegramUrl} target="_blank" rel="noopener noreferrer" class="btn-ghost" data-goal="click_telegram">
           <Icon name="telegram" size={18} />{u.writeTelegram}
         </a>
