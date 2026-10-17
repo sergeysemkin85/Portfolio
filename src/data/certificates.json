@@ -1,5 +1,18 @@
 [
   {
+    "id": "google-ai-essentials",
+    "title": {
+      "ru": "Google AI Essentials Certificate",
+      "en": "Google AI Essentials Certificate"
+    },
+    "org": {
+      "ru": "Google, Coursera",
+      "en": "Google, Coursera"
+    },
+    "year": 2026,
+    "category": "AI"
+  },
+  {
     "id": "claude-101",
     "title": {
       "ru": "Claude 101",
