@@ -1,5 +1,58 @@
 [
-  { "id": "rusagro", "name": { "ru": "Группа компаний «Русагро»", "en": "Rusagro Group" }, "logo": "logos/clients/rusagro.webp" },
-  { "id": "thai-tan", "name": { "ru": "Thái Tân (Вьетнам)", "en": "Thái Tân (Vietnam)" }, "logo": "logos/clients/thai-tan.webp" },
-  { "id": "alp-itsm", "name": { "ru": "ALP ITSM", "en": "ALP ITSM" }, "logo": "logos/clients/alp-itsm.webp" }
+  {
+    "id": "rusagro",
+    "name": {
+      "ru": "Группа компаний «Русагро»",
+      "en": "Rusagro Group"
+    },
+    "logo": "logos/clients/rusagro.webp"
+  },
+  {
+    "id": "thai-tan",
+    "name": {
+      "ru": "Thái Tân (Вьетнам)",
+      "en": "Thái Tân (Vietnam)"
+    },
+    "logo": "logos/clients/thai-tan.webp"
+  },
+  {
+    "id": "alp-itsm",
+    "name": {
+      "ru": "ALP ITSM",
+      "en": "ALP ITSM"
+    },
+    "logo": "logos/clients/alp-itsm.webp"
+  },
+  {
+    "id": "lanit",
+    "name": {
+      "ru": "ЛАНИТ",
+      "en": "LANIT"
+    },
+    "logo": "logos/clients/lanit.webp"
+  },
+  {
+    "id": "kozhevnikovo",
+    "name": {
+      "ru": "KBrew, пивоварня в Кожевниково",
+      "en": "KBrew Brewery, Kozhevnikovo"
+    },
+    "logo": "logos/clients/kozhevnikovo.webp"
+  },
+  {
+    "id": "rosspirtprom",
+    "name": {
+      "ru": "Росспиртпром",
+      "en": "Rosspirtprom"
+    },
+    "logo": "logos/clients/rosspirtprom.webp"
+  },
+  {
+    "id": "tatspirtprom",
+    "name": {
+      "ru": "Татспиртпром",
+      "en": "Tatspirtprom"
+    },
+    "logo": "logos/clients/tatspirtprom.webp"
+  }
 ]
