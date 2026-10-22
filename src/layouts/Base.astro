@@ -11,7 +11,8 @@ interface Props {
 const { lang } = Astro.props;
 
 const title = t(site.seo.title, lang);
-const description = t(site.subtitle, lang);
+// Для поисковиков и соцсетей — первое предложение подзаголовка
+const description = t(site.subtitle, lang).split(/(?<=\.)\s/)[0];
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const ruPath = `${base}/`;
 const enPath = `${base}/en/`;
